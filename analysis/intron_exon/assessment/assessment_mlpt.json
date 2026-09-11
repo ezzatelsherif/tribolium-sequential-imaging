@@ -1,0 +1,66 @@
+{
+  "gene": "mlpt",
+  "B": 199,
+  "seed": 2026091301,
+  "dt": 0.025,
+  "observed_SSE": 0.12218711135076739,
+  "null_SSE_mean": 0.024739503230741602,
+  "null_SSE_median": 0.022433020445426,
+  "exceedances": 0,
+  "conditional_lack_of_fit_p": 0.005,
+  "monte_carlo_se": 0.004987484335815001,
+  "optimizer_failures": 0,
+  "retries": 0,
+  "starts": [
+    {
+      "T": 0.005000000000351934,
+      "splice": 0.15029276707154549,
+      "decay": 0.5426445577292122,
+      "gain": 1.070196668646676,
+      "pulses": [
+        {
+          "center": 8.091384744538628,
+          "rise": 4.259392960918775,
+          "fall": 3.7806725368028133
+        },
+        {
+          "center": 19.819763891491995,
+          "rise": 4.1542895165822875,
+          "fall": 0.2500000000000019
+        }
+      ]
+    },
+    {
+      "T": 0.3,
+      "splice": 0.005000017684662227,
+      "decay": 0.5030736750109208,
+      "gain": 1.080324381768364,
+      "pulses": [
+        {
+          "center": 8.027457056615983,
+          "rise": 4.263973312733112,
+          "fall": 3.808672151700179
+        },
+        {
+          "center": 19.72634148730932,
+          "rise": 4.094880494904101,
+          "fall": 0.25000000000000006
+        }
+      ]
+    }
+  ],
+  "scale": [
+    512.0,
+    1203.2
+  ],
+  "elapsed_seconds": 142.2102973461151,
+  "source_file": "fitresults/fit_mlpt_cosine.json",
+  "source_sha256": "af4c223b475712499f34fbeb10e47ac2eaaa3694b57c0d684dfdd36b1a53e2ec",
+  "interpretation": "Conditional approximate descriptive lack-of-fit test; not cross-validation, proof of no overfitting, or biochemical parameter inference.",
+  "method": "Within-stage paired residual bootstrap centered at the fitted bivariate mean; finite-n residual correction sqrt(n/(n-1)); fixed original channel scaling; both paired channels resampled together; same full mapped constrained cosine pulse model refitted.",
+  "optimizer_spotchecks": 2,
+  "p_before_spotchecks": 0.005,
+  "optimizer_spotcheck_max_improvement": 2.2380715336556278e-11,
+  "optimizer_spotcheck_elapsed_seconds": 44.28412342071533,
+  "optimizer_spotcheck_changed_p": false
+}

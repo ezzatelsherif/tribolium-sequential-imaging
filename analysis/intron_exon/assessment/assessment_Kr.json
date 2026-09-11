@@ -1,0 +1,56 @@
+{
+  "gene": "Kr",
+  "B": 199,
+  "seed": 2026091300,
+  "dt": 0.025,
+  "observed_SSE": 0.03840438175014298,
+  "null_SSE_mean": 0.04202511237414519,
+  "null_SSE_median": 0.0297089976460563,
+  "exceedances": 81,
+  "conditional_lack_of_fit_p": 0.41,
+  "monte_carlo_se": 0.0347778665245584,
+  "optimizer_failures": 0,
+  "retries": 2,
+  "starts": [
+    {
+      "T": 0.005000017815429951,
+      "splice": 0.5427659132889592,
+      "decay": 0.6988940301049033,
+      "gain": 1.0988914597428765,
+      "pulses": [
+        {
+          "center": 7.913687986854608,
+          "rise": 5.3961657132898315,
+          "fall": 0.2500000000352111
+        }
+      ]
+    },
+    {
+      "T": 0.3,
+      "splice": 0.5576381358068092,
+      "decay": 0.5475069552050192,
+      "gain": 1.0825877444733976,
+      "pulses": [
+        {
+          "center": 7.791254794316028,
+          "rise": 5.422748105493762,
+          "fall": 0.2500000014211594
+        }
+      ]
+    }
+  ],
+  "scale": [
+    428.0,
+    1391.75
+  ],
+  "elapsed_seconds": 82.51660490036011,
+  "source_file": "fitresults/fit_Kr_cosine.json",
+  "source_sha256": "96d386bc0ae3252bef1cae3df86479c78bb8b2ca5a42ec7d3149a219fe182434",
+  "interpretation": "Conditional approximate descriptive lack-of-fit test; not cross-validation, proof of no overfitting, or biochemical parameter inference.",
+  "method": "Within-stage paired residual bootstrap centered at the fitted bivariate mean; finite-n residual correction sqrt(n/(n-1)); fixed original channel scaling; both paired channels resampled together; same full mapped constrained cosine pulse model refitted.",
+  "optimizer_spotchecks": 2,
+  "p_before_spotchecks": 0.41,
+  "optimizer_spotcheck_max_improvement": 1.5146493128476157e-07,
+  "optimizer_spotcheck_elapsed_seconds": 21.79348611831665,
+  "optimizer_spotcheck_changed_p": false
+}

@@ -1,0 +1,326 @@
+{
+  "assembly": "Tcas5.2",
+  "genes": {
+    "Kr": {
+      "exon_targets": [
+        [
+          0,
+          180
+        ],
+        [
+          5067,
+          7045
+        ]
+      ],
+      "intron_targets": [
+        [
+          1223,
+          4102
+        ]
+      ],
+      "splice_site_bp": 5067,
+      "transcript_end_bp": 7045,
+      "coordinate_note": "Zero at aligned exonic target 5-prime boundary; transcript start/end used as modeling proxies, not independently measured.",
+      "strand": 1,
+      "reference_accession": "NC_007425.3",
+      "genomic_target_start1": 6495452,
+      "genomic_target_end1": 6502496,
+      "exonic_query_length": 2158,
+      "excluded_query_tail": "",
+      "junctions": [
+        {
+          "start0": 180,
+          "end0": 5067,
+          "donor": "GT",
+          "acceptor": "AG"
+        }
+      ],
+      "annotated_transcripts": [
+        {
+          "transcript": "NM_001039438.2",
+          "exons_relative0": [
+            [
+              0,
+              180
+            ],
+            [
+              5067,
+              7045
+            ]
+          ],
+          "exact_structure_match": true
+        },
+        {
+          "transcript": "XM_015984138.1",
+          "exons_relative0": [
+            [
+              90,
+              180
+            ],
+            [
+              5054,
+              6956
+            ]
+          ],
+          "exact_structure_match": false
+        }
+      ],
+      "uniform_upstream_target_fraction": 0.08341056533827618,
+      "reference_N_bases_in_target_span": 984
+    },
+    "mlpt": {
+      "exon_targets": [
+        [
+          0,
+          321
+        ],
+        [
+          993,
+          1271
+        ]
+      ],
+      "intron_targets": [
+        [
+          374,
+          943
+        ]
+      ],
+      "splice_site_bp": 993,
+      "transcript_end_bp": 1271,
+      "coordinate_note": "Zero at aligned exonic target 5-prime boundary; transcript start/end used as modeling proxies, not independently measured.",
+      "strand": -1,
+      "reference_accession": "NC_007424.3",
+      "genomic_target_start1": 15958600,
+      "genomic_target_end1": 15959870,
+      "exonic_query_length": 616,
+      "excluded_query_tail": "AAAAAAAAAAAAAAAAA",
+      "junctions": [
+        {
+          "start0": 321,
+          "end0": 993,
+          "donor": "GT",
+          "acceptor": "AG"
+        }
+      ],
+      "annotated_transcripts": [
+        {
+          "transcript": "NM_001114384.1",
+          "exons_relative0": [
+            [
+              0,
+              321
+            ],
+            [
+              993,
+              1271
+            ]
+          ],
+          "exact_structure_match": true
+        },
+        {
+          "transcript": "NM_001134482.1",
+          "exons_relative0": [
+            [
+              0,
+              321
+            ],
+            [
+              993,
+              1271
+            ]
+          ],
+          "exact_structure_match": true
+        },
+        {
+          "transcript": "NM_001134483.1",
+          "exons_relative0": [
+            [
+              0,
+              321
+            ],
+            [
+              993,
+              1271
+            ]
+          ],
+          "exact_structure_match": true
+        }
+      ],
+      "uniform_upstream_target_fraction": 0.5358931552587646,
+      "reference_N_bases_in_target_span": 0
+    },
+    "svb": {
+      "exon_targets": [
+        [
+          0,
+          304
+        ],
+        [
+          5148,
+          6746
+        ],
+        [
+          6945,
+          7315
+        ],
+        [
+          7560,
+          7862
+        ],
+        [
+          8103,
+          8950
+        ]
+      ],
+      "intron_targets": [
+        [
+          532,
+          4900
+        ]
+      ],
+      "splice_site_bp": 5148,
+      "transcript_end_bp": 8950,
+      "coordinate_note": "Zero at aligned exonic target 5-prime boundary; transcript start/end used as modeling proxies, not independently measured.",
+      "strand": 1,
+      "reference_accession": "NC_007419.2",
+      "genomic_target_start1": 5009353,
+      "genomic_target_end1": 5018302,
+      "exonic_query_length": 3421,
+      "excluded_query_tail": "",
+      "junctions": [
+        {
+          "start0": 304,
+          "end0": 5148,
+          "donor": "GT",
+          "acceptor": "AG"
+        },
+        {
+          "start0": 6746,
+          "end0": 6945,
+          "donor": "GT",
+          "acceptor": "AG"
+        },
+        {
+          "start0": 7315,
+          "end0": 7560,
+          "donor": "GT",
+          "acceptor": "AG"
+        },
+        {
+          "start0": 7862,
+          "end0": 8103,
+          "donor": "GT",
+          "acceptor": "AG"
+        }
+      ],
+      "annotated_transcripts": [
+        {
+          "transcript": "XM_008193919.2",
+          "exons_relative0": [
+            [
+              70,
+              304
+            ],
+            [
+              5148,
+              6746
+            ],
+            [
+              6933,
+              7255
+            ],
+            [
+              7578,
+              7862
+            ],
+            [
+              7922,
+              8675
+            ]
+          ],
+          "exact_structure_match": false
+        },
+        {
+          "transcript": "XM_008193917.2",
+          "exons_relative0": [
+            [
+              70,
+              304
+            ],
+            [
+              5148,
+              6746
+            ],
+            [
+              6933,
+              7255
+            ],
+            [
+              7578,
+              7862
+            ],
+            [
+              8103,
+              8675
+            ]
+          ],
+          "exact_structure_match": false
+        },
+        {
+          "transcript": "XM_008193918.2",
+          "exons_relative0": [
+            [
+              70,
+              304
+            ],
+            [
+              5148,
+              6746
+            ],
+            [
+              6945,
+              7255
+            ],
+            [
+              7578,
+              7862
+            ],
+            [
+              8103,
+              8675
+            ]
+          ],
+          "exact_structure_match": false
+        },
+        {
+          "transcript": "XM_008193920.2",
+          "exons_relative0": [
+            [
+              70,
+              304
+            ],
+            [
+              5148,
+              6725
+            ],
+            [
+              6945,
+              7255
+            ],
+            [
+              7578,
+              7862
+            ],
+            [
+              8103,
+              8675
+            ]
+          ],
+          "exact_structure_match": false
+        }
+      ],
+      "uniform_upstream_target_fraction": 0.08886290558316282,
+      "reference_N_bases_in_target_span": 0
+    }
+  }
+}
