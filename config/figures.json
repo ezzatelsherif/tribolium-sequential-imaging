@@ -1,0 +1,367 @@
+{
+  "manuscript": "Manuscript_ver44.docx",
+  "spatial_normalization": "minmax",
+  "spatial_smoothing_fraction": 0.1,
+  "spatial_smoothing_order": 3,
+  "block_smoothing_fraction": 0.15,
+  "eve_reference": "pooled",
+  "temporal_plot_values": "workbook_display",
+  "comparison_stages": [
+    "3.3",
+    "4.1",
+    "4.3",
+    "5.2"
+  ],
+  "gene_groups": {
+    "A": [
+      "eve",
+      "runt",
+      "odd"
+    ],
+    "B": [
+      "mlpt",
+      "gt"
+    ],
+    "C": [
+      "kr",
+      "svb"
+    ],
+    "D": [
+      "eve",
+      "kr",
+      "mlpt",
+      "gt"
+    ]
+  },
+  "supplement_gene_groups": {
+    "A": [
+      "eve",
+      "runt",
+      "odd"
+    ],
+    "B": [
+      "eve",
+      "mlpt",
+      "gt"
+    ],
+    "C": [
+      "eve",
+      "kr",
+      "svb"
+    ],
+    "D": [
+      "eve",
+      "kr",
+      "mlpt",
+      "gt"
+    ]
+  },
+  "spatial_files": [
+    {
+      "path": "data/spatial/exonic/Stage3_3/EMB_1.csv",
+      "assay": "exonic",
+      "stage": "3.3",
+      "embryo": "EMB_1",
+      "figures": [
+        "Figure 6"
+      ],
+      "genes": [
+        "eve",
+        "gt",
+        "kr",
+        "mlpt",
+        "odd",
+        "runt",
+        "svb"
+      ]
+    },
+    {
+      "path": "data/spatial/exonic/Stage3_3/EMB_2.csv",
+      "assay": "exonic",
+      "stage": "3.3",
+      "embryo": "EMB_2",
+      "figures": [
+        "Figure S1"
+      ],
+      "genes": [
+        "eve",
+        "gt",
+        "kr",
+        "mlpt",
+        "odd",
+        "runt",
+        "svb"
+      ]
+    },
+    {
+      "path": "data/spatial/exonic/Stage3_3/EMB_3.csv",
+      "assay": "exonic",
+      "stage": "3.3",
+      "embryo": "EMB_3",
+      "figures": [
+        "Figure S2"
+      ],
+      "genes": [
+        "eve",
+        "gt",
+        "kr",
+        "mlpt",
+        "odd",
+        "runt",
+        "svb"
+      ]
+    },
+    {
+      "path": "data/spatial/exonic/Stage4_1/EMB_1.csv",
+      "assay": "exonic",
+      "stage": "4.1",
+      "embryo": "EMB_1",
+      "figures": [
+        "Figure 6",
+        "Figure 2C"
+      ],
+      "genes": [
+        "hb",
+        "kr",
+        "mlpt",
+        "gt",
+        "svb",
+        "eve",
+        "runt",
+        "odd",
+        "en",
+        "cad"
+      ]
+    },
+    {
+      "path": "data/spatial/exonic/Stage4_1/EMB_2.csv",
+      "assay": "exonic",
+      "stage": "4.1",
+      "embryo": "EMB_2",
+      "figures": [
+        "Figure S1"
+      ],
+      "genes": [
+        "eve",
+        "gt",
+        "kr",
+        "mlpt",
+        "odd",
+        "runt",
+        "svb"
+      ]
+    },
+    {
+      "path": "data/spatial/exonic/Stage4_1/EMB_3.csv",
+      "assay": "exonic",
+      "stage": "4.1",
+      "embryo": "EMB_3",
+      "figures": [
+        "Figure S2"
+      ],
+      "genes": [
+        "eve",
+        "gt",
+        "kr",
+        "mlpt",
+        "odd",
+        "runt",
+        "svb"
+      ]
+    },
+    {
+      "path": "data/spatial/exonic/Stage4_3/EMB_1.csv",
+      "assay": "exonic",
+      "stage": "4.3",
+      "embryo": "EMB_1",
+      "figures": [
+        "Figure 6"
+      ],
+      "genes": [
+        "eve",
+        "gt",
+        "kr",
+        "mlpt",
+        "odd",
+        "runt",
+        "svb"
+      ]
+    },
+    {
+      "path": "data/spatial/exonic/Stage4_3/EMB_2.csv",
+      "assay": "exonic",
+      "stage": "4.3",
+      "embryo": "EMB_2",
+      "figures": [
+        "Figure S1"
+      ],
+      "genes": [
+        "eve",
+        "gt",
+        "kr",
+        "mlpt",
+        "odd",
+        "runt",
+        "svb"
+      ]
+    },
+    {
+      "path": "data/spatial/exonic/Stage4_3/EMB_3.csv",
+      "assay": "exonic",
+      "stage": "4.3",
+      "embryo": "EMB_3",
+      "figures": [
+        "Figure S2"
+      ],
+      "genes": [
+        "eve",
+        "gt",
+        "kr",
+        "mlpt",
+        "odd",
+        "runt",
+        "svb"
+      ]
+    },
+    {
+      "path": "data/spatial/exonic/Stage5_2/EMB_1.csv",
+      "assay": "exonic",
+      "stage": "5.2",
+      "embryo": "EMB_1",
+      "figures": [
+        "Figure 6"
+      ],
+      "genes": [
+        "eve",
+        "gt",
+        "kr",
+        "mlpt",
+        "odd",
+        "runt",
+        "svb"
+      ]
+    },
+    {
+      "path": "data/spatial/exonic/Stage5_2/EMB_2.csv",
+      "assay": "exonic",
+      "stage": "5.2",
+      "embryo": "EMB_2",
+      "figures": [
+        "Figure S1"
+      ],
+      "genes": [
+        "eve",
+        "gt",
+        "kr",
+        "mlpt",
+        "odd",
+        "runt",
+        "svb"
+      ]
+    },
+    {
+      "path": "data/spatial/exonic/Stage5_2/EMB_3.csv",
+      "assay": "exonic",
+      "stage": "5.2",
+      "embryo": "EMB_3",
+      "figures": [
+        "Figure S2"
+      ],
+      "genes": [
+        "eve",
+        "gt",
+        "kr",
+        "mlpt",
+        "odd",
+        "runt",
+        "svb"
+      ]
+    },
+    {
+      "path": "data/spatial/intron_exon/Stage3_3/EMB_1.csv",
+      "assay": "intron_exon",
+      "stage": "3.3",
+      "embryo": "EMB_1",
+      "figures": [
+        "Figure 4"
+      ],
+      "genes": [
+        "cad",
+        "kr",
+        "krint",
+        "mlpt",
+        "mlptint"
+      ]
+    },
+    {
+      "path": "data/spatial/intron_exon/Stage4_2/EMB_1.csv",
+      "assay": "intron_exon",
+      "stage": "4.2",
+      "embryo": "EMB_1",
+      "figures": [
+        "Figure 4",
+        "Figure S5",
+        "Figure 3F"
+      ],
+      "genes": [
+        "cad",
+        "gt",
+        "kr",
+        "krint",
+        "mlpt",
+        "mlptint",
+        "svb",
+        "svbint"
+      ]
+    },
+    {
+      "path": "data/spatial/intron_exon/Stage4_2/EMB_3.csv",
+      "assay": "intron_exon",
+      "stage": "4.2",
+      "embryo": "EMB_3",
+      "figures": [
+        "Figure S5"
+      ],
+      "genes": [
+        "cad",
+        "kr",
+        "krint",
+        "mlpt",
+        "mlptint"
+      ]
+    },
+    {
+      "path": "data/spatial/intron_exon/Stage4_3/EMB_1.csv",
+      "assay": "intron_exon",
+      "stage": "4.3",
+      "embryo": "EMB_1",
+      "figures": [
+        "Figure 4",
+        "Figure S5"
+      ],
+      "genes": [
+        "cad",
+        "kr",
+        "krint",
+        "mlpt",
+        "mlptint"
+      ]
+    },
+    {
+      "path": "data/spatial/intron_exon/Stage4_3/EMB_3.csv",
+      "assay": "intron_exon",
+      "stage": "4.3",
+      "embryo": "EMB_3",
+      "figures": [
+        "Figure S5"
+      ],
+      "genes": [
+        "cad",
+        "kr",
+        "krint",
+        "mlpt",
+        "mlptint"
+      ]
+    }
+  ]
+}
