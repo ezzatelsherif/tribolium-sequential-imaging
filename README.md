@@ -46,10 +46,9 @@ python reproduce.py profiles
 python reproduce.py model --stage manuscript-figures
 ```
 
-`verify` checks source checksums, manuscript curve matches, complete intron/exon
-pair counts, target sequences, saved fits, and simulation summaries. It reports
-one documented missing-background value in the original temporal workbooks;
-this is a source-data qualification, not an installation error.
+`verify` checks source checksums, historical manuscript curve matches, the
+confirmed background correction, unique-cohort eve pooling, complete intron/exon
+pair counts, target sequences, saved fits, and simulation summaries.
 
 `profiles` writes CSV tables and PDF, SVG, and PNG plots to `outputs/profiles/`.
 The last command writes Fig. 3 numerical components and Figs. S3 and S4 to
@@ -65,8 +64,9 @@ choose a new path when starting from a different repository version.
 
 | Command | Result |
 |---|---|
-| `python reproduce.py verify` | Source integrity, 121 manuscript curve-shape checks, and archived model verification |
+| `python reproduce.py verify` | Source integrity, 121 historical curve-shape checks and correction checks, and archived model verification |
 | `python reproduce.py profiles` | Spatial and temporal profiles, stage summaries, and comparison panels |
+| `python -m seqimaging.correction_review` | Effects of the recovered background and removal of repeated eve measurements |
 | `python reproduce.py model --stage empirical` | Background correction and 5,000 paired within-stage bootstrap resamples |
 | `python reproduce.py model --stage sweep` | All 1,944 hypothetical kinetic scenarios and numerical convergence checks |
 | `python reproduce.py model --stage fits` | Joint fits for both initiation-pulse families and traversal modes |
@@ -90,9 +90,10 @@ model restrictions, and numerical qualifications are documented in the
 |---|---|
 | [data/README.md](data/README.md) | Data dictionary and specimen identifiers |
 | [data/manifest.csv](data/manifest.csv) | Exact source files, provenance links, sizes, checksums, and figure uses |
+| [data/temporal_corrections.csv](data/temporal_corrections.csv) | Confirmed background correction and its provenance |
 | [config/figures.json](config/figures.json) | Embryo assignments, plotted channels, and display settings |
 | [docs/figure_map.md](docs/figure_map.md) | Manuscript panels, source files, commands, and output filenames |
-| [docs/data_notes.md](docs/data_notes.md) | Normalization, pooled eve reference, missing background, and source-version notes |
+| [docs/data_notes.md](docs/data_notes.md) | Normalization, unique-cohort eve pooling, recovered background, and source-version notes |
 | [docs/methods.md](docs/methods.md) | Fluorescence processing and block-display calculations |
 | [docs/validation.md](docs/validation.md) | What was checked and the limits of those checks |
 | [seqimaging/](seqimaging/) | Profile readers, summaries, plotting, and verification |
@@ -101,13 +102,15 @@ model restrictions, and numerical qualifications are documented in the
 The seven temporal workbooks retain the original measurements and cached
 worksheet values. Three are also present in the unchanged S1 Code package;
 verification checks that these copies are identical. The regenerated temporal
-CSV explicitly separates raw posterior-minus-background measurements from
-the cached values used by the original viewer. Read the
-[data notes](docs/data_notes.md) before interpreting or changing those choices.
+CSV retains the original values alongside the confirmed correction. Current
+plots use corrected posterior-minus-background values and count the shared
+run/odd eve cohort once. Historical cached values remain available for
+comparison. See the [data notes](docs/data_notes.md) for provenance and impact.
 
 The source-data selection and figure assignments correspond to
-`Manuscript_ver44.docx` in the September 14 revision folder. Notes identify the
-remaining differences between its wording and the supplied figures/code.
+`Manuscript_ver46.docx` in the September 14 revision folder. Regenerated
+numerical panels incorporate the corrections; earlier assembled microscopy
+figures require the corresponding temporal curves to be replaced.
 
 ## Attribution and citation
 

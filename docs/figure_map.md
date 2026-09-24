@@ -35,7 +35,7 @@ qualifications in [data_notes.md](data_notes.md).
 
 | Table in `outputs/profiles/` | Contents |
 |---|---|
-| `temporal_measurements.csv` | All source slots, raw ROI values, raw correction, cached display value, completeness |
+| `temporal_measurements.csv` | All source slots, original and corrected ROI values, cached display value, completeness, correction identifiers |
 | `temporal_stage_summary.csv` | Per-cohort/channel stage statistics for raw correction and cached display values |
 | `comparison_temporal_profiles.csv` | Exact stage summaries used in Fig. 6/S1/S2, including pooled eve |
 | `spatial_profiles.csv` | Source-file identity, stage, embryo, gene, normalized AP position and smoothed intensity |

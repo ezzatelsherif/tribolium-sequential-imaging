@@ -138,7 +138,7 @@ def reproduce_profiles(output):
     dense = np.linspace(1, 24, 400)
     for ax, gene in zip(axes, GENE_FILES):
         for channel, plotted, color in (("mrna", gene, COLORS[gene]), ("eve", "eve", COLORS["eve"])):
-            table = summarize_temporal(measurements, gene, channel, "workbook_display")
+            table = summarize_temporal(measurements, gene, channel, config["temporal_plot_values"])
             y = PchipInterpolator(table.stage_index, table.normalized_mean)(dense)
             sem = PchipInterpolator(table.stage_index, table.normalized_sem)(dense)
             ax.plot(dense, y, color=color, label=plotted)

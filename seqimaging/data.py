@@ -95,12 +95,15 @@ def output_directory(path):
     return path
 
 
-def temporal_measurements():
+def temporal_measurements(apply_corrections=True):
     """Return all source slots, including incomplete measurements, in long form.
 
     A is the posterior ROI and B the anterior background ROI. Negative A-B
     values are retained. Completeness is evaluated separately for each channel;
     the paired intron/exon analysis applies its additional paired-slot filter.
+    Confirmed corrections are applied from data/temporal_corrections.csv.
+    Source values and the historical cached display are retained separately.
+    Set apply_corrections=False to reproduce the original workbook values.
     """
     rows = []
     for gene, filename in GENE_FILES.items():
@@ -131,7 +134,30 @@ def temporal_measurements():
                                  "corrected": posterior - background,
                                  "workbook_display": plot_value,
                                  "complete": complete})
-    return pd.DataFrame(rows)
+    measurements = pd.DataFrame(rows)
+    for field in ("anterior_background", "corrected", "complete"):
+        measurements[f"source_{field}"] = measurements[field]
+    measurements["correction_id"] = ""
+    if apply_corrections:
+        corrections = pd.read_csv(ROOT / "data/temporal_corrections.csv", dtype={"stage": str})
+        keys = ["cohort", "stage", "channel", "specimen_slot"]
+        if corrections.duplicated(keys).any():
+            raise ValueError("Duplicate temporal correction targets")
+        for correction in corrections.itertuples():
+            selected = np.logical_and.reduce([
+                measurements[key] == getattr(correction, key) for key in keys])
+            if selected.sum() != 1:
+                raise ValueError(f"Correction target is not unique: {correction.correction_id}")
+            row = measurements.loc[selected].iloc[0]
+            if row.posterior != correction.posterior or not np.isnan(row.anterior_background):
+                raise ValueError(f"Source no longer matches correction: {correction.correction_id}")
+            if not np.isfinite(correction.anterior_background):
+                raise ValueError(f"Nonfinite correction: {correction.correction_id}")
+            measurements.loc[selected, "anterior_background"] = correction.anterior_background
+            measurements.loc[selected, "corrected"] = row.posterior - correction.anterior_background
+            measurements.loc[selected, "complete"] = True
+            measurements.loc[selected, "correction_id"] = correction.correction_id
+    return measurements
 
 
 def summarize_temporal(measurements, cohort, channel, quantity="corrected"):
@@ -157,20 +183,29 @@ def summarize_temporal(measurements, cohort, channel, quantity="corrected"):
     return summary.reset_index()
 
 
-def comparison_temporal(measurements, eve_reference, quantity="workbook_display"):
+def comparison_temporal(measurements, eve_reference, quantity="corrected"):
     """Prepare the temporal curves with an explicit eve-reference choice.
 
     'runt' selects the eve observations from the shared pair-rule cohort.
-    'pooled' reproduces the original viewer's concatenation of the seven
-    workbooks, including the identical eve entries in run.xlsx and odd.xlsx.
+    'pooled_unique' pools the six cohorts, counting shared run/odd eve once.
+    'pooled' retains the original viewer's seven-workbook concatenation for
+    historical comparisons, including the repeated shared eve measurements.
     Individual cohort summaries remain available separately in the output.
     """
     summaries = {gene: summarize_temporal(measurements, gene, "mrna", quantity)
                  for gene in GENE_FILES}
-    if eve_reference == "pooled":
+    if eve_reference in ("pooled_unique", "pooled"):
         pooled = measurements.loc[measurements.channel == "eve"].copy()
-        pooled["cohort"] = "pooled"
-        summaries["eve"] = summarize_temporal(pooled, "pooled", "eve", quantity)
+        if eve_reference == "pooled_unique":
+            keys = ["stage", "specimen_slot"]
+            columns = ["posterior", "anterior_background", quantity]
+            run = pooled.loc[pooled.cohort == "runt"].set_index(keys)[columns].sort_index()
+            odd = pooled.loc[pooled.cohort == "odd"].set_index(keys)[columns].sort_index()
+            if not run.equals(odd):
+                raise ValueError("Expected identical shared run/odd eve measurements")
+            pooled = pooled.loc[pooled.cohort != "odd"].copy()
+        pooled["cohort"] = eve_reference
+        summaries["eve"] = summarize_temporal(pooled, eve_reference, "eve", quantity)
     elif eve_reference in GENE_FILES:
         summaries["eve"] = summarize_temporal(measurements, eve_reference, "eve", quantity)
     else:

@@ -1,11 +1,11 @@
 {
-  "manuscript": "Manuscript_ver44.docx",
+  "manuscript": "Manuscript_ver46.docx",
   "spatial_normalization": "minmax",
   "spatial_smoothing_fraction": 0.1,
   "spatial_smoothing_order": 3,
   "block_smoothing_fraction": 0.15,
-  "eve_reference": "pooled",
-  "temporal_plot_values": "workbook_display",
+  "eve_reference": "pooled_unique",
+  "temporal_plot_values": "corrected",
   "comparison_stages": [
     "3.3",
     "4.1",

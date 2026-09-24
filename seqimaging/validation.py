@@ -39,7 +39,7 @@ def verify():
                 f"The model and profile source workbooks differ: {name}")
     print(f"Verified {len(manifest)} source checksums and all 17 spatial figure assignments.")
 
-    measurements = temporal_measurements()
+    measurements = temporal_measurements(apply_corrections=False)
     complete = measurements.loc[measurements.complete]
     require(np.allclose(complete.corrected, complete.workbook_display, atol=1e-9),
             "Cached workbook values differ from available posterior-minus-background measurements")
@@ -60,12 +60,34 @@ def verify():
     odd = eve.loc[eve.cohort == "odd", ["posterior", "anterior_background"]].to_numpy()
     require(np.array_equal(run, odd, equal_nan=True), "The shared run/odd eve measurements differ")
     print("Verified raw corrections and paired specimen counts (Kr 116, mlpt 118, svb 116).")
-    print("Recorded source exception: KR.xlsx, stage 8.1, eve slot 5 has no anterior background;")
-    print("  the original display uses cached 1380; raw A-B remains missing. See docs/data_notes.md.")
+    corrected = temporal_measurements()
+    selected = corrected.correction_id == "KR_eve_8.1_5"
+    require(selected.sum() == 1, "Expected one confirmed background correction")
+    recovered = corrected.loc[selected].iloc[0]
+    require((recovered.anterior_background, recovered.corrected, recovered.complete)
+            == (328, 1052, True), "Recovered background correction changed")
+    require(corrected.loc[~selected, "corrected"].equals(measurements.loc[~selected, "corrected"]),
+            "An unrelated temporal measurement changed")
+    require(not ((~corrected.complete) & corrected.workbook_display.notna()).any(),
+            "Unresolved displayed measurement without a background")
+    current = comparison_temporal(corrected, config["eve_reference"], config["temporal_plot_values"])
+    require(config["eve_reference"] == "pooled_unique" and config["temporal_plot_values"] == "corrected",
+            "Expected corrected measurements and one copy of the shared eve cohort")
+    expected_counts = corrected.loc[(corrected.channel == "eve") & (corrected.cohort != "odd")].groupby(
+        "stage_index").corrected.count().to_numpy()
+    require(np.array_equal(current["eve"]["count"].to_numpy(), expected_counts),
+            "Pooled eve counts do not match the six cohorts")
+    print("Applied confirmed background 328: KR.xlsx, stage 8.1, eve slot 5 is now 1052.")
+    print("Verified one copy of the shared run/odd eve cohort in the current pooled reference.")
 
     reference = json.loads((ROOT / "validation/figure_traces.json").read_text())
     x = np.linspace(0, 1, reference["points"])
-    temporal = comparison_temporal(measurements, config["eve_reference"], config["temporal_plot_values"])
+    # The supplied figure PDFs predate the confirmed correction. Keep their
+    # trace check historical instead of changing references to fit new output.
+    temporal = comparison_temporal(measurements, "pooled", "workbook_display")
+    for gene in current.keys() - {"eve"}:
+        require(np.array_equal(current[gene].normalized_mean, temporal[gene].normalized_mean),
+                f"An unaffected temporal gene profile changed: {gene}")
     spatial, errors = {}, []
     for trace in reference["curves"]:
         if trace["kind"] == "spatial":
@@ -86,4 +108,4 @@ def verify():
                 f"Figure curve changed: {trace['figure']}, {trace['gene']}, RMSE={error:.6f}")
         errors.append(error)
     require(set(spatial) == spatial_files, "Not every spatial embryo has a manuscript trace")
-    print(f"Matched {len(errors)} reference curve shapes; maximum RMSE {max(errors):.6f}.")
+    print(f"Matched {len(errors)} historical reference curve shapes; maximum RMSE {max(errors):.6f}.")

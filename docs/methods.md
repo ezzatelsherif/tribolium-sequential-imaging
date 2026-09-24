@@ -28,8 +28,10 @@ The measurements are posterior ROI A minus anterior background ROI B. Channels
 are summarized separately within each cohort and assigned stage. The source
 viewer uses cached `BASE` values and treats cached zeros as missing. For the
 included source data, no complete raw A-B observation equals a discarded zero;
-the sole raw/cached completeness discrepancy is recorded in
-[data_notes.md](data_notes.md).
+the original raw/cached completeness discrepancy is recorded in
+[data_notes.md](data_notes.md). The current workflow applies the confirmed
+background correction from `data/temporal_corrections.csv` and plots A-B
+values. Original source fields and cached values remain in the exported table.
 
 For each channel, let `mean[s]` be the stage mean and let `lo` and `hi` be the
 minimum and maximum of those means over all 24 stages. The display values are
@@ -43,7 +45,8 @@ curve. The SEM envelope is interpolated separately. Temporal comparison panels
 display this same full-series interpolation cropped at the indicated stage;
 they do not renormalize or refit interpolation separately for each crop.
 Stages occupy indices 1-24 with equal spacing, without conversion to minutes.
-The comparison eve curve is pooled as detailed in the data notes.
+The comparison eve curve pools the six cohorts, counting the shared run/odd
+eve measurements once, as detailed in the data notes.
 
 Fig. 3/S4 uses its own paired specimen filter and maximum-only normalization.
 See the [intron/exon protocol](../analysis/intron_exon/analysis_protocol.md)

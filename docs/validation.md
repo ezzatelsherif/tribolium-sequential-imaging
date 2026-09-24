@@ -7,11 +7,13 @@ are documented, but this release was not executed on those systems.
 
 ## Source and figure checks
 
-`python reproduce.py verify` checks all 24 source-file SHA256 hashes and
+`python reproduce.py verify` checks all 24 original source-file SHA256 hashes and the confirmed-correction CSV and
 requires every included spatial CSV to have a figure assignment. The three
 temporal workbooks used by both workflows are checked for byte identity.
-Raw corrections, complete intron/exon pair counts, shared run/odd eve entries,
-and the single missing-background exception are checked explicitly.
+Original raw corrections, complete intron/exon pair counts, shared run/odd eve
+entries, and the historical missing-background exception are checked explicitly.
+The verifier then checks the recovered background (328), corrected value (1052),
+unchanged unrelated observations, and once-only counting of the shared cohort.
 
 The file `validation/figure_traces.json` contains 121 sampled curve shapes
 from the supplied manuscript figure PDFs: 114 spatial curves spanning all
@@ -19,7 +21,9 @@ from the supplied manuscript figure PDFs: 114 spatial curves spanning all
 run, odd, and pooled eve). Each reference records the figure and vector-path
 index used. Repeated identical curves are represented once per source/channel.
 
-The reference and regenerated curves are mapped to their own 0-1 x and y
+For this historical reference check, the reader disables corrections and uses
+the original seven-workbook cached display. The reference and regenerated
+historical curves are mapped to their own 0-1 x and y
 ranges and compared at 120 positions. The maximum observed root-mean-square
 error was **0.000420**, below the **0.002** acceptance tolerance. The tolerance
 allows for PDF coordinate rounding and resampling. This comparison establishes
@@ -76,10 +80,20 @@ and verified for internal consistency. The full fresh global-optimization
 search and all 199 bootstrap refits per gene were **not** repeated as part of
 this packaging check. Commands for those computations are in the main README.
 
+## Confirmed correction checks
+
+The revised profiles were regenerated with the recovered background and one
+copy of the shared run/odd eve cohort. All non-eve temporal comparison curves
+are exactly unchanged. The pooled eve curve changes by at most 0.035492 in
+normalized stage mean, retaining all eight local peak substages. The original
+121-curve reference check remains historical rather than being relabeled as a
+match to the revised figures. `python -m seqimaging.correction_review` reproduces
+the impact comparison without changing the supplied reference traces.
+
 ## Limits
 
-Reproducibility checks do not resolve the source and manuscript qualifications
-in [data_notes.md](data_notes.md). In particular, the display's cached
-missing-background value, duplicated eve weighting, spatial-normalization
-wording, and Fig. 6B/C legend mismatch remain explicit. The original source
-measurements have not been altered to remove these qualifications.
+The [data notes](data_notes.md) distinguish original measurements, confirmed
+corrections, and comparison settings. Revised numerical panels require assembly
+into the final figure layouts. Registration from raw images remains outside
+this release. Changes to peak amplitudes or threshold crossings are not ruled
+out by unchanged peak substages.

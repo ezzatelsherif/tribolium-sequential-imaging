@@ -2,7 +2,8 @@
 
 Only source datasets used in the manuscript are included here. File contents
 are preserved, including original headers, unused columns within a selected
-source file, and missing values. The figure workflow selects the channels
+source file, and missing values. Confirmed corrections are supplied separately in
+`temporal_corrections.csv` and applied by the reader. The figure workflow selects the channels
 listed in `config/figures.json`; it does not treat every column as a separate
 published result. Original provenance links are recorded for traceability,
 but reading the repository does not require access to those links.
@@ -58,15 +59,20 @@ stage indices 1-24.
 Numbered slots 1-5 identify paired measurements **within one workbook row**.
 They are not persistent embryo IDs across stages or across gap-gene cohorts.
 The run and odd workbooks share the same eve measurements. Gap genes were
-measured in separate cohorts. Source blanks remain missing, negative corrected
-intensities remain negative, and no new background values are supplied.
+measured in separate cohorts. Original source blanks remain visible, and negative corrected intensities
+remain negative. One recovered background value is supplied separately in
+`temporal_corrections.csv`, with its measurement provenance.
 
 `python reproduce.py profiles` exports `temporal_measurements.csv` with raw
 posterior/background, `corrected` (A-B), `workbook_display`, and `complete`
-columns. `temporal_stage_summary.csv` reports counts, means, sample standard
-deviations, SEM, and normalization parameters for both value definitions.
-The [data notes](../docs/data_notes.md) explain the single incomplete raw
-measurement included by the historical cached display.
+columns. `source_anterior_background`, `source_corrected`, and `source_complete`
+preserve the original workbook values, and `correction_id` links any corrected
+row to the correction table. `workbook_display` always means the original
+cached display value, not the corrected plotting value.
+`temporal_stage_summary.csv` reports counts, means, sample standard deviations,
+SEM, and normalization parameters for both definitions. Current figures use
+`corrected`. The [data notes](../docs/data_notes.md) document the recovered
+background of 328 and the shared run/odd eve cohort, which is counted once.
 
 ## Intron/exon model inputs
 
