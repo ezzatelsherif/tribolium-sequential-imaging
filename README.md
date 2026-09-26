@@ -51,7 +51,8 @@ confirmed background correction, unique-cohort eve pooling, complete intron/exon
 pair counts, target sequences, saved fits, and simulation summaries.
 
 `profiles` writes CSV tables and PDF, SVG, and PNG plots to `outputs/profiles/`.
-The last command writes Fig. 3 numerical components and Figs. S3 and S4 to
+The last command writes Fig. 3 numerical components and supplemental model
+figures (S1 and S2 in the final revised manuscript) to
 `outputs/model/figures/`. These commands regenerate numerical panels with clear
 labels; they do not reconstruct the complete microscopy composites.
 
@@ -73,7 +74,7 @@ choose a new path when starting from a different repository version.
 | `python reproduce.py model --stage numerics` | Final-fit mesh checks and independent adaptive quadrature |
 | `python reproduce.py model --stage assessment` | Traversal profiles, 199 conditional bootstrap refits per gene, optimizer checks |
 | `python reproduce.py model --stage all` | All computational analysis stages in dependency order |
-| `python reproduce.py model --stage manuscript-figures` | Fig. 3 numerical components and Figs. S3 and S4 from results in the output copy |
+| `python reproduce.py model --stage manuscript-figures` | Fig. 3 numerical components and supplemental model figures (S1 and S2 in the final revised manuscript) from results in the output copy |
 | `python reproduce.py model --stage movie` | Movie S1; also requires FFmpeg with the `libx264` encoder |
 
 Verification and profile plotting are suitable starting points. Full fitting
@@ -107,10 +108,15 @@ plots use corrected posterior-minus-background values and count the shared
 run/odd eve cohort once. Historical cached values remain available for
 comparison. See the [data notes](docs/data_notes.md) for provenance and impact.
 
-The source-data selection and figure assignments correspond to
-`Manuscript_ver46.docx` in the September 14 revision folder. Regenerated
-numerical panels incorporate the corrections; earlier assembled microscopy
-figures require the corresponding temporal curves to be replaced.
+The source-data selection and figure assignments correspond to the final
+revised manuscript submitted to PLOS Genetics (Drive file
+`1iWvbs7Pprpb97Rsep7eCD2Y3o_wvY7dX`, `Manuscript_ver51.docx`). The
+underlying data and panel assignments are those of analysis commit
+`19370cf7e16210569157a784997fbce0f1933fa0`. Between manuscript versions
+46 and 51, the supplemental figure labels changed: former S3/S4/S5 became
+S1/S2/S3, and former S1/S2 became S4/S5. The numerical workflows retain
+their original output filenames; [the figure map](docs/figure_map.md)
+identifies the corresponding final panels.
 
 ## Attribution and citation
 

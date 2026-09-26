@@ -15,6 +15,11 @@ entries, and the historical missing-background exception are checked explicitly.
 The verifier then checks the recovered background (328), corrected value (1052),
 unchanged unrelated observations, and once-only counting of the shared cohort.
 
+The file `validation/figure_traces.json` retains the original source-PDF labels.
+Its `Figure_S1.pdf`, `Figure_S2.pdf`, and intron/exon replicate source correspond
+to final Figs. S4, S5, and S3, respectively. These historical reference names
+are unchanged so the verification can still locate the archived traces.
+
 The file `validation/figure_traces.json` contains 121 sampled curve shapes
 from the supplied manuscript figure PDFs: 114 spatial curves spanning all
 17 included embryos, and seven temporal comparison curves (Kr, mlpt, gt, svb,

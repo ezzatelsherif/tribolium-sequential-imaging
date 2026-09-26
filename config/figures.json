@@ -1,5 +1,5 @@
 {
-  "manuscript": "Manuscript_ver46.docx",
+  "manuscript": "Manuscript_ver51.docx",
   "spatial_normalization": "minmax",
   "spatial_smoothing_fraction": 0.1,
   "spatial_smoothing_order": 3,
@@ -81,7 +81,7 @@
       "stage": "3.3",
       "embryo": "EMB_2",
       "figures": [
-        "Figure S1"
+        "Figure S4"
       ],
       "genes": [
         "eve",
@@ -99,7 +99,7 @@
       "stage": "3.3",
       "embryo": "EMB_3",
       "figures": [
-        "Figure S2"
+        "Figure S5"
       ],
       "genes": [
         "eve",
@@ -139,7 +139,7 @@
       "stage": "4.1",
       "embryo": "EMB_2",
       "figures": [
-        "Figure S1"
+        "Figure S4"
       ],
       "genes": [
         "eve",
@@ -157,7 +157,7 @@
       "stage": "4.1",
       "embryo": "EMB_3",
       "figures": [
-        "Figure S2"
+        "Figure S5"
       ],
       "genes": [
         "eve",
@@ -193,7 +193,7 @@
       "stage": "4.3",
       "embryo": "EMB_2",
       "figures": [
-        "Figure S1"
+        "Figure S4"
       ],
       "genes": [
         "eve",
@@ -211,7 +211,7 @@
       "stage": "4.3",
       "embryo": "EMB_3",
       "figures": [
-        "Figure S2"
+        "Figure S5"
       ],
       "genes": [
         "eve",
@@ -247,7 +247,7 @@
       "stage": "5.2",
       "embryo": "EMB_2",
       "figures": [
-        "Figure S1"
+        "Figure S4"
       ],
       "genes": [
         "eve",
@@ -265,7 +265,7 @@
       "stage": "5.2",
       "embryo": "EMB_3",
       "figures": [
-        "Figure S2"
+        "Figure S5"
       ],
       "genes": [
         "eve",
@@ -300,7 +300,7 @@
       "embryo": "EMB_1",
       "figures": [
         "Figure 4",
-        "Figure S5",
+        "Figure S3",
         "Figure 3F"
       ],
       "genes": [
@@ -320,7 +320,7 @@
       "stage": "4.2",
       "embryo": "EMB_3",
       "figures": [
-        "Figure S5"
+        "Figure S3"
       ],
       "genes": [
         "cad",
@@ -337,7 +337,7 @@
       "embryo": "EMB_1",
       "figures": [
         "Figure 4",
-        "Figure S5"
+        "Figure S3"
       ],
       "genes": [
         "cad",
@@ -353,7 +353,7 @@
       "stage": "4.3",
       "embryo": "EMB_3",
       "figures": [
-        "Figure S5"
+        "Figure S3"
       ],
       "genes": [
         "cad",

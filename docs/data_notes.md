@@ -2,7 +2,8 @@
 
 The original source workbooks and spatial CSVs are preserved byte for byte.
 Confirmed measurement corrections are recorded separately and applied by the
-reader. The current settings accompany `Manuscript_ver46.docx`.
+reader. The current settings accompany the final revised manuscript
+(`Manuscript_ver51.docx`; analysis commit `19370cf`).
 
 ## Spatial normalization
 
@@ -11,8 +12,8 @@ Spatial profiles are normalized separately for each channel and embryo:
 `normalized = (intensity - minimum) / (maximum - minimum)`
 
 This precedes Savitzky-Golay smoothing, which can produce small excursions
-beyond 0-1. Manuscript versions 45 and later describe this computation.
-The separate Fig. 3/S4 intron/exon analysis divides paired temporal profiles
+beyond 0-1. The final revised manuscript describes this computation.
+The separate Fig. 3/S2 intron/exon analysis divides paired temporal profiles
 by their maximum stage means without subtracting a stage-mean minimum.
 
 ## Confirmed anterior-background correction
@@ -37,7 +38,7 @@ pair count, fit, offset estimate, or simulation.
 
 ## eve reference in temporal-to-spatial comparisons
 
-Fig. 6, S1, and S2 use a common eve reference pooled from six temporal cohorts:
+Fig. 6, S4, and S5 use a common eve reference pooled from six temporal cohorts:
 the five gap-gene cohorts and the shared run/odd cohort. The run and odd
 workbooks contain the same eve measurements. The default `pooled_unique`
 setting verifies that correspondence and includes the run copy once, omitting
@@ -53,7 +54,7 @@ The `pooled` option retains that historical weighting for comparison. Use
 
 Fig. 5 retains separate summaries for each gene and its co-measured eve.
 The common comparison reference is not a single co-measured pair-rule cohort.
-Fig. S1/S2 add spatial embryos, not new temporal cohorts.
+Figs. S4/S5 add spatial embryos, not new temporal cohorts.
 
 ## Effect of the corrections
 
@@ -78,7 +79,7 @@ been edited by this numerical workflow.
 
 The stage 4.2 EMB_3 file in the Drive collection differs from the version in
 Frimpong's intron/exon repository. The GitHub version matches all five curves
-of the additional stage 4.2 embryo in Fig. S5 and is included here. Its upstream
+of the additional stage 4.2 embryo in Fig. S3 and is included here. Its upstream
 blob is `2c483e35fe2e7b54065afcb5222046083a57fb5c`, at commit
 `7121c65d65b4d8979282d9ebb1edb97a5af5b304`. `data/manifest.csv` records this
 immutable provenance. The additional stage 4.3 embryo matches the supplied

@@ -11,11 +11,11 @@ but reading the repository does not require access to those links.
 ## Spatial CSVs
 
 `spatial/exonic/` contains 12 embryos: EMB_1, EMB_2, and EMB_3 at each of stages
-3.3, 4.1, 4.3, and 5.2. These supply Fig. 6, Fig. S1, and Fig. S2, respectively.
+3.3, 4.1, 4.3, and 5.2. These supply Fig. 6, Fig. S4, and Fig. S5, respectively.
 Stage 4.1 EMB_1 also supplies the Fig. 2C profile example.
 
 `spatial/intron_exon/` contains five embryos. EMB_1 at stages 3.3, 4.2, and 4.3
-supplies Fig. 4B. EMB_1 and EMB_3 at stages 4.2 and 4.3 supply Fig. S5. Its
+supplies Fig. 4B. EMB_1 and EMB_3 at stages 4.2 and 4.3 supply Fig. S3. Its
 "replicate 2" is the original **EMB_3** file, not EMB_2. Stage 4.2 EMB_1 also
 supplies Fig. 3F spatial overlays.
 
@@ -36,7 +36,7 @@ Entirely empty rows are ignored on reading. Missing values in a requested
 channel cause an error; no per-channel position deletion or imputation is used.
 
 The selected stage 4.2 EMB_3 source has 49 missing `svbint` values at coordinates
-500-548 and four entirely empty trailing rows. Fig. S5 uses kr, krint, mlpt,
+500-548 and four entirely empty trailing rows. Fig. S3 uses kr, krint, mlpt,
 mlptint, and cad, whose measurements are complete. That unused svbint column
 is retained in the original CSV and is excluded from the figure workflow.
 
