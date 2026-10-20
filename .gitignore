@@ -20,3 +20,7 @@ Desktop.ini
 
 # Recreated tables, plots, and model runs
 outputs/
+analysis/peak_order/results/
+peak_order_results/
+peak_order_smoke/
+peak_order_corrected/

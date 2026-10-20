@@ -1,0 +1,128 @@
+table,row_number,row_key,column,historical,corrected
+temporal_peaks,7,"{""cohort"": ""SVB"", ""event_id"": ""svb_first""}",ci95_high,6.937421777221528,6.90863579474343
+temporal_peaks,8,"{""cohort"": ""SVB"", ""event_id"": ""eve_cycle1""}",valid_bootstrap_n,13032.0,13044.0
+temporal_peaks,21,"{""cohort"": ""GT"", ""event_id"": ""eve_cycle1""}",valid_bootstrap_n,19992.0,19994.0
+temporal_peaks,8,"{""cohort"": ""SVB"", ""event_id"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+temporal_peaks,21,"{""cohort"": ""GT"", ""event_id"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+temporal_contrasts,9,"{""pair_id"": ""SVB__svb_first__vs__SVB__eve_cycle4"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+temporal_contrasts,43,"{""pair_id"": ""SVB__svb_first__vs__pairrule__run_cycle2"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+temporal_contrasts,59,"{""pair_id"": ""GT__gt_peak1__vs__pairrule__run_cycle2"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+temporal_contrasts,69,"{""pair_id"": ""GT__gt_peak2__vs__pairrule__run_cycle4"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+temporal_contrasts,52,"{""pair_id"": ""MLPT__mlpt_first__vs__pairrule__run_cycle3"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+temporal_contrasts,58,"{""pair_id"": ""MLPT__mlpt_first__vs__pairrule__odd_cycle5"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+temporal_contrasts,6,"{""pair_id"": ""SVB__svb_first__vs__SVB__eve_cycle1"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+temporal_contrasts,16,"{""pair_id"": ""GT__gt_peak1__vs__GT__eve_cycle1"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+temporal_contrasts,21,"{""pair_id"": ""GT__gt_peak2__vs__GT__eve_cycle1"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+temporal_contrasts,6,"{""pair_id"": ""SVB__svb_first__vs__SVB__eve_cycle1"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_n,13032.0,13044.0
+temporal_contrasts,16,"{""pair_id"": ""GT__gt_peak1__vs__GT__eve_cycle1"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_n,19992.0,19994.0
+temporal_contrasts,21,"{""pair_id"": ""GT__gt_peak2__vs__GT__eve_cycle1"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_n,19992.0,19994.0
+comparison_inventory,73,"{""stage"": ""Stage3_3"", ""embryo"": ""1"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,74,"{""stage"": ""Stage3_3"", ""embryo"": ""2"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,75,"{""stage"": ""Stage3_3"", ""embryo"": ""3"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,91,"{""stage"": ""Stage3_3"", ""embryo"": ""1"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,92,"{""stage"": ""Stage3_3"", ""embryo"": ""2"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,93,"{""stage"": ""Stage3_3"", ""embryo"": ""3"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,220,"{""stage"": ""Stage3_3"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,221,"{""stage"": ""Stage3_3"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,222,"{""stage"": ""Stage3_3"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,247,"{""stage"": ""Stage3_3"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,248,"{""stage"": ""Stage3_3"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,249,"{""stage"": ""Stage3_3"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,349,"{""stage"": ""Stage4_1"", ""embryo"": ""1"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,350,"{""stage"": ""Stage4_1"", ""embryo"": ""2"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,351,"{""stage"": ""Stage4_1"", ""embryo"": ""3"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,367,"{""stage"": ""Stage4_1"", ""embryo"": ""1"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,368,"{""stage"": ""Stage4_1"", ""embryo"": ""2"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,369,"{""stage"": ""Stage4_1"", ""embryo"": ""3"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,523,"{""stage"": ""Stage4_1"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,524,"{""stage"": ""Stage4_1"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,525,"{""stage"": ""Stage4_1"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,550,"{""stage"": ""Stage4_1"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,551,"{""stage"": ""Stage4_1"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,552,"{""stage"": ""Stage4_1"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,652,"{""stage"": ""Stage4_3"", ""embryo"": ""1"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,653,"{""stage"": ""Stage4_3"", ""embryo"": ""2"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,654,"{""stage"": ""Stage4_3"", ""embryo"": ""3"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,670,"{""stage"": ""Stage4_3"", ""embryo"": ""1"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,671,"{""stage"": ""Stage4_3"", ""embryo"": ""2"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,672,"{""stage"": ""Stage4_3"", ""embryo"": ""3"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,826,"{""stage"": ""Stage4_3"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,827,"{""stage"": ""Stage4_3"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,828,"{""stage"": ""Stage4_3"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,853,"{""stage"": ""Stage4_3"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,854,"{""stage"": ""Stage4_3"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,855,"{""stage"": ""Stage4_3"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,955,"{""stage"": ""Stage5_2"", ""embryo"": ""1"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,956,"{""stage"": ""Stage5_2"", ""embryo"": ""2"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,957,"{""stage"": ""Stage5_2"", ""embryo"": ""3"", ""event_a"": ""gt_peak1"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-3.972465581977473,-4.001251564455569
+comparison_inventory,973,"{""stage"": ""Stage5_2"", ""embryo"": ""1"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,974,"{""stage"": ""Stage5_2"", ""embryo"": ""2"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,975,"{""stage"": ""Stage5_2"", ""embryo"": ""3"", ""event_a"": ""gt_peak2"", ""event_b"": ""run_cycle4""}",temporal_ci95_low,0.171996245306633,0.1727158948685847
+comparison_inventory,1129,"{""stage"": ""Stage5_2"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,1130,"{""stage"": ""Stage5_2"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,1131,"{""stage"": ""Stage5_2"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle4""}",temporal_ci95_low,2.4755944931163967,2.504380475594492
+comparison_inventory,1156,"{""stage"": ""Stage5_2"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,1157,"{""stage"": ""Stage5_2"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,1158,"{""stage"": ""Stage5_2"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""run_cycle2""}",temporal_ci95_low,-2.7346683354192747,-2.705882352941177
+comparison_inventory,178,"{""stage"": ""Stage3_3"", ""embryo"": ""1"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,179,"{""stage"": ""Stage3_3"", ""embryo"": ""2"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,180,"{""stage"": ""Stage3_3"", ""embryo"": ""3"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,184,"{""stage"": ""Stage3_3"", ""embryo"": ""1"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,185,"{""stage"": ""Stage3_3"", ""embryo"": ""2"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,186,"{""stage"": ""Stage3_3"", ""embryo"": ""3"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,454,"{""stage"": ""Stage4_1"", ""embryo"": ""1"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,455,"{""stage"": ""Stage4_1"", ""embryo"": ""2"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,456,"{""stage"": ""Stage4_1"", ""embryo"": ""3"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,460,"{""stage"": ""Stage4_1"", ""embryo"": ""1"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,461,"{""stage"": ""Stage4_1"", ""embryo"": ""2"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,462,"{""stage"": ""Stage4_1"", ""embryo"": ""3"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,757,"{""stage"": ""Stage4_3"", ""embryo"": ""1"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,758,"{""stage"": ""Stage4_3"", ""embryo"": ""2"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,759,"{""stage"": ""Stage4_3"", ""embryo"": ""3"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,763,"{""stage"": ""Stage4_3"", ""embryo"": ""1"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,764,"{""stage"": ""Stage4_3"", ""embryo"": ""2"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,765,"{""stage"": ""Stage4_3"", ""embryo"": ""3"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,1060,"{""stage"": ""Stage5_2"", ""embryo"": ""1"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,1061,"{""stage"": ""Stage5_2"", ""embryo"": ""2"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,1062,"{""stage"": ""Stage5_2"", ""embryo"": ""3"", ""event_a"": ""mlpt_first"", ""event_b"": ""odd_cycle5""}",temporal_ci95_high,7.138923654568209,7.110137672090115
+comparison_inventory,1066,"{""stage"": ""Stage5_2"", ""embryo"": ""1"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,1067,"{""stage"": ""Stage5_2"", ""embryo"": ""2"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,1068,"{""stage"": ""Stage5_2"", ""embryo"": ""3"", ""event_a"": ""mlpt_first"", ""event_b"": ""run_cycle3""}",temporal_ci95_high,0.1151439299123913,0.1439299123904875
+comparison_inventory,19,"{""stage"": ""Stage3_3"", ""embryo"": ""1"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,20,"{""stage"": ""Stage3_3"", ""embryo"": ""2"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,21,"{""stage"": ""Stage3_3"", ""embryo"": ""3"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,34,"{""stage"": ""Stage3_3"", ""embryo"": ""1"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,35,"{""stage"": ""Stage3_3"", ""embryo"": ""2"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,36,"{""stage"": ""Stage3_3"", ""embryo"": ""3"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,211,"{""stage"": ""Stage3_3"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+comparison_inventory,212,"{""stage"": ""Stage3_3"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+comparison_inventory,213,"{""stage"": ""Stage3_3"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+comparison_inventory,295,"{""stage"": ""Stage4_1"", ""embryo"": ""1"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,296,"{""stage"": ""Stage4_1"", ""embryo"": ""2"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,297,"{""stage"": ""Stage4_1"", ""embryo"": ""3"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,310,"{""stage"": ""Stage4_1"", ""embryo"": ""1"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,311,"{""stage"": ""Stage4_1"", ""embryo"": ""2"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,312,"{""stage"": ""Stage4_1"", ""embryo"": ""3"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,514,"{""stage"": ""Stage4_1"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+comparison_inventory,515,"{""stage"": ""Stage4_1"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+comparison_inventory,516,"{""stage"": ""Stage4_1"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+comparison_inventory,598,"{""stage"": ""Stage4_3"", ""embryo"": ""1"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,599,"{""stage"": ""Stage4_3"", ""embryo"": ""2"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,600,"{""stage"": ""Stage4_3"", ""embryo"": ""3"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,613,"{""stage"": ""Stage4_3"", ""embryo"": ""1"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,614,"{""stage"": ""Stage4_3"", ""embryo"": ""2"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,615,"{""stage"": ""Stage4_3"", ""embryo"": ""3"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,817,"{""stage"": ""Stage4_3"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+comparison_inventory,818,"{""stage"": ""Stage4_3"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+comparison_inventory,819,"{""stage"": ""Stage4_3"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+comparison_inventory,901,"{""stage"": ""Stage5_2"", ""embryo"": ""1"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,902,"{""stage"": ""Stage5_2"", ""embryo"": ""2"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,903,"{""stage"": ""Stage5_2"", ""embryo"": ""3"", ""event_a"": ""gt_peak1"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,916,"{""stage"": ""Stage5_2"", ""embryo"": ""1"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,917,"{""stage"": ""Stage5_2"", ""embryo"": ""2"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,918,"{""stage"": ""Stage5_2"", ""embryo"": ""3"", ""event_a"": ""gt_peak2"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.9996,0.9997
+comparison_inventory,1120,"{""stage"": ""Stage5_2"", ""embryo"": ""1"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+comparison_inventory,1121,"{""stage"": ""Stage5_2"", ""embryo"": ""2"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+comparison_inventory,1122,"{""stage"": ""Stage5_2"", ""embryo"": ""3"", ""event_a"": ""svb_first"", ""event_b"": ""eve_cycle1""}",valid_bootstrap_fraction,0.6516,0.6522
+figure7_markers,34,"{""panel"": ""D"", ""cohort"": ""kr"", ""event_id"": ""eve_cycle3"", ""stage"": ""nan"", ""embryo"": ""nan""}",display_y,0.6690080674955328,0.6664429647598005
+figure7_markers,13,"{""panel"": ""B"", ""cohort"": ""svb"", ""event_id"": ""svb_first"", ""stage"": ""nan"", ""embryo"": ""nan""}",ci95_high,6.937421777221528,6.90863579474343

@@ -1,0 +1,142 @@
+{
+  "bootstrap_draws": 20000,
+  "seed": 20261019,
+  "confirmed_temporal_corrections_applied": false,
+  "seconds": 94.672,
+  "steps": [
+    {
+      "step": "01_bootstrap",
+      "seconds": 7.532
+    },
+    {
+      "step": "02_spatial_raw",
+      "seconds": 6.315
+    },
+    {
+      "step": "03_pairrule_smoothing",
+      "seconds": 13.738
+    },
+    {
+      "step": "04_gt_mlpt_smoothing",
+      "seconds": 4.918
+    },
+    {
+      "step": "05_svb_kr_smoothing",
+      "seconds": 12.281
+    },
+    {
+      "step": "06_svb_sensitivity",
+      "seconds": 1.017
+    },
+    {
+      "step": "07_pairrule_peak_screen",
+      "seconds": 1.491
+    },
+    {
+      "step": "08_gap_peak_extraction",
+      "seconds": 33.023
+    },
+    {
+      "step": "09_all_gene_comparison",
+      "seconds": 5.554
+    },
+    {
+      "step": "10_s1_data",
+      "seconds": 0.716
+    },
+    {
+      "step": "11_figure7",
+      "seconds": 1.114
+    },
+    {
+      "step": "12_companion",
+      "seconds": 6.511
+    }
+  ],
+  "reference_checks": [
+    {
+      "table": "figure7_ver05/Peak_Order_Comparisons_ver05.csv",
+      "rows": 1167,
+      "columns_compared": 29,
+      "ignored_path_columns": [],
+      "passed": true
+    },
+    {
+      "table": "figure7_ver05/Peak_Order_Gene_Pair_Coverage_ver05.csv",
+      "rows": 21,
+      "columns_compared": 6,
+      "ignored_path_columns": [],
+      "passed": true
+    },
+    {
+      "table": "figure7_ver05_analysis/gap_peaks/spatial_peak_references.csv",
+      "rows": 54,
+      "columns_compared": 23,
+      "ignored_path_columns": [],
+      "passed": true
+    },
+    {
+      "table": "figure7_ver05_analysis/gap_peaks/temporal_peak_references.csv",
+      "rows": 25,
+      "columns_compared": 12,
+      "ignored_path_columns": [],
+      "passed": true
+    },
+    {
+      "table": "figure7_ver05_analysis/pairrule/posterior_mask.csv",
+      "rows": 39,
+      "columns_compared": 19,
+      "ignored_path_columns": [],
+      "passed": true
+    },
+    {
+      "table": "figure7_ver05_analysis/pairrule/spatial_peak_references.csv",
+      "rows": 108,
+      "columns_compared": 38,
+      "ignored_path_columns": [],
+      "passed": true
+    },
+    {
+      "table": "figure7_ver08/Fig7_peak_markers_ver08.csv",
+      "rows": 40,
+      "columns_compared": 13,
+      "ignored_path_columns": [],
+      "passed": true
+    },
+    {
+      "table": "figure7_ver08/Fig7_peak_time_differences_ver08.csv",
+      "rows": 6,
+      "columns_compared": 17,
+      "ignored_path_columns": [
+        "source"
+      ],
+      "passed": true
+    }
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scientific_input_sha256": {
+    "inputs/reconstructed_points.json": "d585557d8061f63f67cb8f32c90b27f6f9e0e62dd63edd054a2f510138120ec4",
+    "inputs/scientific_input_manifest.json": "d7898e3feed30e878e9ee124ad67bad3a1765a29540626ab564dd98706923419"
+  },
+  "repository_input_sha256": {
+    "Stage3_3/EMB_1.csv": "91a2fb517e782a545810e5eb5e96c0c8e11161cab285d1c71f1ab1de69aa840f",
+    "Stage3_3/EMB_2.csv": "cfa922bad8e8448d69f6476650ff6321964d6114da005a726b09698eede886f4",
+    "Stage3_3/EMB_3.csv": "3647cbd61dfc78ee57ea816971cd0c0669fe8bcb493af39dadab66527c8ff10c",
+    "Stage4_1/EMB_1.csv": "34e60a216622e769cae0ef7bdf09c769d8e90ea80fb50f7015991f25066b4e9f",
+    "Stage4_1/EMB_2.csv": "6f2bebc41055bc860daba17ec4911450eb16704124c552905f803e48ffdcbfbe",
+    "Stage4_1/EMB_3.csv": "61783ae367422a5c78ef223be7c8be327e4ccc1a4b13bc8cee9ae98c6c883a18",
+    "Stage4_3/EMB_1.csv": "47f685a75de57afd7ab1f582344b093272d04ba970d19bd61ae68ba5f16ce153",
+    "Stage4_3/EMB_2.csv": "6366f5299292f54dd185250f79aa90e03dc4a6776ca07cd69752f05ee11192cf",
+    "Stage4_3/EMB_3.csv": "253a8306755ca00ce7c8ccca6b25056fec9a2b3c434f78628df4375cd87c0743",
+    "Stage5_2/EMB_1.csv": "90dcb15748e8198051373de75d94eaf7d46261021be4cc6de8ff73a608f156b7",
+    "Stage5_2/EMB_2.csv": "5327077c2c942dfe110203b45455a6787ecc0f6cf588778d869c742db86efcb1",
+    "Stage5_2/EMB_3.csv": "ff12a52a7c637b3aafd2062b423a9a282d512cefde12020ab2788369e3324652",
+    "Temporal/GT.xlsx": "cb9833367c151979d4e88d486b3e0e1f1f7fcb9363a7b6c9c896302f69cebbb4",
+    "Temporal/HB.xlsx": "e8734b6635fac65cf8af1b4d41a36f12a4f21a14d0cfc6b380d967518e5f1bba",
+    "Temporal/KR.xlsx": "a43efaea8250b019e11db3526b2b909d0808269dfb9782d37d5545c0b0f0583a",
+    "Temporal/MLPT.xlsx": "ffde3aae669d2063f9f4dc5ca2ca5f87af361948d182fa89b6d318091a521621",
+    "Temporal/SVB.xlsx": "3d87f1424b08a8210c6a483f20ec3dca318e22399798234ba6741ce76a370251",
+    "Temporal/odd.xlsx": "01d0917a9caa563cb11d87d228fd0391510a8c53b78f61a0292c84f5e10421e7",
+    "Temporal/run.xlsx": "9591c8a30768a68a52b8ee606236cbf68ed27c335b6a86ca1e404220de8931ae"
+  }
+}

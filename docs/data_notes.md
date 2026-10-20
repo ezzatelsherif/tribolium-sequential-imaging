@@ -2,7 +2,7 @@
 
 The original source workbooks and spatial CSVs are preserved byte for byte.
 Confirmed measurement corrections are recorded separately and applied by the
-reader. The current settings accompany the final revised manuscript
+profile reader. The original profile settings accompany the first revised manuscript
 (`Manuscript_ver51.docx`; analysis commit `19370cf`).
 
 ## Spatial normalization
@@ -99,3 +99,26 @@ image acquisition, DAPI-based registration, manual ROI placement, or complete
 microscopy composites. The original registration implementation was not in
 the supplied revision code package. Reproduction from raw images would also
 require that implementation, its settings, and the image inputs.
+
+## Second-revision peak-order input version
+
+`analysis/peak_order/` reuses the seven temporal workbooks and 12 exonic
+spatial files already in this repository, without adding biological specimens.
+Its default run reproduces the reviewed historical peak-order calculations,
+which subtract raw posterior and background measurements and omit incomplete
+paired slots. That historical run omitted the stage-8.1 KR-cohort eve slot
+whose background was initially missing. The profile workflow above instead
+applies the confirmed correction. The package documents this difference
+explicitly rather than silently changing the archived result.
+
+`python reproduce.py peaks --apply-confirmed-corrections --output outputs/peak_order_corrected`
+performs the complete corrected sensitivity. In the verified 20,000-draw
+comparison, all observed peak positions, all six displayed Fig. 7 direct
+contrasts and their intervals, and all 1,167 ordering classifications and
+eligibility flags were unchanged. Small changes in a few other interval
+endpoints reflect the original shared random-number stream advancing
+differently after the extra complete observation. Whole-series normalization
+also changes the early KR-cohort eve display by at most 0.007529 on the 0-1
+scale, without moving its peaks. See the package validation evidence for the
+complete comparison. The background correction was never relevant to the
+Kr intron/exon model measurements.

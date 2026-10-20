@@ -5,7 +5,8 @@ translating time into space during embryonic patterning**, Garcia-Guillen,
 Ahmadi, Frimpong and colleagues, El-Sherif laboratory.
 
 This repository reproduces the numerical expression profiles, intron/exon
-analyses, and biochemical simulations in the revised manuscript. Its inputs
+analyses, biochemical simulations, and temporal-to-spatial peak-order analysis
+in the second revision (Manuscript ver57, S1 Text ver03). Its inputs
 are the extracted fluorescence measurements used in the paper: 17 spatial
 embryo CSVs, seven temporal workbooks, and the mapped probe-target information
 in the intron/exon analysis package. Additional embryos and developmental
@@ -19,8 +20,7 @@ below is included; no Drive access or external data download is needed.
 ## Quick start
 
 Use **Python 3.12**. Clone this repository, open a terminal in its root directory,
-and create a dedicated environment. While the repository is private, cloning
-requires a GitHub account with access.
+and create a dedicated environment. The repository is public.
 
 ```sh
 git clone https://github.com/ezzatelsherif/tribolium-sequential-imaging.git
@@ -44,6 +44,7 @@ python -m pip install -r requirements.txt
 python reproduce.py verify
 python reproduce.py profiles
 python reproduce.py model --stage manuscript-figures
+python reproduce.py peaks
 ```
 
 `verify` checks source checksums, historical manuscript curve matches, the
@@ -51,10 +52,27 @@ confirmed background correction, unique-cohort eve pooling, complete intron/exon
 pair counts, target sequences, saved fits, and simulation summaries.
 
 `profiles` writes CSV tables and PDF, SVG, and PNG plots to `outputs/profiles/`.
-The last command writes Fig. 3 numerical components and supplemental model
+The model command writes Fig. 3 numerical components and supplemental model
 figures (S1 and S2 in the final revised manuscript) to
 `outputs/model/figures/`. These commands regenerate numerical panels with clear
 labels; they do not reconstruct the complete microscopy composites.
+
+`peaks` rebuilds the complete 20,000-draw peak-order analysis from the repository
+measurements, including Fig. 7 (PDF, editable SVG and PNG), the seven-page
+companion for Fig. S6, and S1 Data. It checks the reconstructed tables against
+the reviewed results. Use a new output directory for each run:
+
+```sh
+python reproduce.py peaks --output outputs/peak_order_recheck
+```
+
+The default peak command reproduces the reviewed historical run exactly. A
+separate documented sensitivity applies the confirmed late-stage background
+correction. These two input policies must not be conflated; see the
+[peak-order documentation](analysis/peak_order/README.md). The correction
+leaves the six Fig. 7 direct contrasts and all 1,167 ordering classifications
+unchanged. The generated figures retain the audited layout; the submitted
+Fig. 7 needs a shorter layout to meet the journal's maximum figure height.
 
 ## Recompute the analyses
 
@@ -67,6 +85,8 @@ choose a new path when starting from a different repository version.
 |---|---|
 | `python reproduce.py verify` | Source integrity, 121 historical curve-shape checks and correction checks, and archived model verification |
 | `python reproduce.py profiles` | Spatial and temporal profiles, stage summaries, and comparison panels |
+| `python reproduce.py peaks` | Full 20,000-draw peak-order analysis, Fig. 7, Fig. S6 companion, S1 Data, and regression checks |
+| `python reproduce.py peaks --apply-confirmed-corrections --output outputs/peak_order_corrected` | Separate full sensitivity with the recovered late KR-cohort eve background |
 | `python -m seqimaging.correction_review` | Effects of the recovered background and removal of repeated eve measurements |
 | `python reproduce.py model --stage empirical` | Background correction and 5,000 paired within-stage bootstrap resamples |
 | `python reproduce.py model --stage sweep` | All 1,944 hypothetical kinetic scenarios and numerical convergence checks |
@@ -99,24 +119,31 @@ model restrictions, and numerical qualifications are documented in the
 | [docs/validation.md](docs/validation.md) | What was checked and the limits of those checks |
 | [seqimaging/](seqimaging/) | Profile readers, summaries, plotting, and verification |
 | [analysis/intron_exon/](analysis/intron_exon/) | Original S1 Code package, source measurements, saved results, and executable notebook |
+| [analysis/peak_order/](analysis/peak_order/) | Second-revision peak-order code, curated event identities, reviewed tables, and full-run validation |
 
 The seven temporal workbooks retain the original measurements and cached
 worksheet values. Three are also present in the unchanged S1 Code package;
 verification checks that these copies are identical. The regenerated temporal
 CSV retains the original values alongside the confirmed correction. Current
-plots use corrected posterior-minus-background values and count the shared
+profile plots use corrected posterior-minus-background values and count the shared
 run/odd eve cohort once. Historical cached values remain available for
-comparison. See the [data notes](docs/data_notes.md) for provenance and impact.
+comparison. The default peak-order run separately preserves the historical
+missing-value pattern. See the [data notes](docs/data_notes.md) and the
+[peak-order package](analysis/peak_order/README.md) for provenance and impact.
 
-The source-data selection and figure assignments correspond to the final
-revised manuscript submitted to PLOS Genetics (Drive file
+The original profile source-data selection and figure assignments were verified
+against the first revised manuscript (Drive file
 `1iWvbs7Pprpb97Rsep7eCD2Y3o_wvY7dX`, `Manuscript_ver51.docx`). The
 underlying data and panel assignments are those of analysis commit
 `19370cf7e16210569157a784997fbce0f1933fa0`. Between manuscript versions
 46 and 51, the supplemental figure labels changed: former S3/S4/S5 became
 S1/S2/S3, and former S1/S2 became S4/S5. The numerical workflows retain
 their original output filenames; [the figure map](docs/figure_map.md)
-identifies the corresponding final panels.
+identifies the corresponding final panels. The second revision adds Fig. 7,
+Fig. S6 and S1 Data, audited against `Manuscript_ver57.docx` and
+`S1_Text_ver03.docx` on 20 October 2026. These additions reuse 12 of the existing
+spatial files and the seven existing temporal workbooks; they introduce no
+additional biological specimens.
 
 ## Attribution and citation
 

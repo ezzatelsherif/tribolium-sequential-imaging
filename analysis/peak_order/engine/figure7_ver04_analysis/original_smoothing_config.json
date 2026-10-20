@@ -1,0 +1,818 @@
+{
+  "provenance": {
+    "notebook": "gt_mlpt_analysis/source_notebook.ipynb",
+    "sha256": "c015f2fdce936c6cfeb41cb9b7b943972b1fa89f338ed71c998296c0c62ef6a4",
+    "configuration_cell_zero_based": 4,
+    "helpers_cell_zero_based": 6,
+    "application_cell_zero_based": 8
+  },
+  "temporal": {
+    "stage_count": 24,
+    "stage_coordinate": "ordinal 0..23, equally spaced ordered labels1.1..8.3; no time calibration",
+    "interpolation": "scipy.interpolate.PchipInterpolator",
+    "dense_grid_size": 800,
+    "frac": 0.1,
+    "polyorder": 3,
+    "window_length": 81,
+    "mode": "interp",
+    "normalization": "subtract minimum whole-series stage mean, divide whole-series stage-mean range BEFORE interpolation and smoothing",
+    "pipeline": "24 stage means -> normalized values -> PCHIP800 -> SG81/poly3; original selected windows subsequently resampledPCHIP300",
+    "applies_explicitly_to": [
+      "eve",
+      "runt",
+      "odd",
+      "kr",
+      "mlpt",
+      "gt"
+    ],
+    "svb": "Absent from source GENES; method can be extended, but no source-specific SVB settings are recorded here."
+  },
+  "spatial": {
+    "normalization": "subtract full raw profile minimum and divide full raw profile range BEFORE smoothing",
+    "pipeline": "normalize full native sample profile -> SG native sample grid -> crop stage-specific interval -> PCHIP300 in original WDL",
+    "window_formula": "int(max(polyorder+2, (n*frac)//2*2+1)); cap to n if odd else n-1",
+    "mode": "interp",
+    "stages": {
+      "Stage3_3": {
+        "smooth": {
+          "1": {
+            "eve": {
+              "frac": 0.25,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.13,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.15,
+              "polyorder": 3
+            },
+            "kr": {
+              "frac": 0.25,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.15,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.4,
+              "polyorder": 3
+            }
+          },
+          "2": {
+            "eve": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "kr": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.1,
+              "polyorder": 3
+            }
+          },
+          "3": {
+            "eve": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "kr": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.15,
+              "polyorder": 3
+            }
+          }
+        },
+        "spatial_range": {
+          "1": {
+            "eve": [
+              0.27,
+              0.925
+            ],
+            "runt": [
+              0.27,
+              0.925
+            ],
+            "odd": [
+              0.27,
+              0.925
+            ],
+            "kr": [
+              0.27,
+              0.925
+            ],
+            "mlpt": [
+              0.27,
+              0.925
+            ],
+            "gt": [
+              0.27,
+              0.925
+            ]
+          },
+          "2": {
+            "eve": [
+              0.275,
+              0.9
+            ],
+            "runt": [
+              0.275,
+              0.9
+            ],
+            "odd": [
+              0.275,
+              0.9
+            ],
+            "kr": [
+              0.275,
+              0.9
+            ],
+            "mlpt": [
+              0.275,
+              0.9
+            ],
+            "gt": [
+              0.275,
+              0.9
+            ]
+          },
+          "3": {
+            "eve": [
+              0.25,
+              0.9
+            ],
+            "runt": [
+              0.25,
+              0.9
+            ],
+            "odd": [
+              0.25,
+              0.9
+            ],
+            "kr": [
+              0.25,
+              0.9
+            ],
+            "mlpt": [
+              0.25,
+              0.9
+            ],
+            "gt": [
+              0.25,
+              0.9
+            ]
+          }
+        },
+        "temporal_range": {
+          "eve": [
+            1.3,
+            3.3
+          ],
+          "runt": [
+            1.3,
+            3.3
+          ],
+          "odd": [
+            1.3,
+            3.3
+          ],
+          "kr": [
+            1.3,
+            3.3
+          ],
+          "mlpt": [
+            1.3,
+            3.3
+          ],
+          "gt": [
+            1.3,
+            3.3
+          ]
+        }
+      },
+      "Stage4_1": {
+        "smooth": {
+          "1": {
+            "eve": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.12,
+              "polyorder": 3
+            },
+            "kr": {
+              "frac": 0.15,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.11,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.05,
+              "polyorder": 3
+            }
+          },
+          "2": {
+            "eve": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.12,
+              "polyorder": 3
+            },
+            "kr": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.18,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.15,
+              "polyorder": 3
+            }
+          },
+          "3": {
+            "eve": {
+              "frac": 0.17,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "kr": {
+              "frac": 0.25,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.12,
+              "polyorder": 3
+            }
+          }
+        },
+        "spatial_range": {
+          "1": {
+            "eve": [
+              0.215,
+              0.925
+            ],
+            "runt": [
+              0.215,
+              0.925
+            ],
+            "odd": [
+              0.215,
+              0.925
+            ],
+            "kr": [
+              0.215,
+              0.925
+            ],
+            "mlpt": [
+              0.215,
+              0.925
+            ],
+            "gt": [
+              0.215,
+              0.925
+            ]
+          },
+          "2": {
+            "eve": [
+              0.245,
+              0.965
+            ],
+            "runt": [
+              0.245,
+              0.965
+            ],
+            "odd": [
+              0.245,
+              0.965
+            ],
+            "kr": [
+              0.245,
+              0.965
+            ],
+            "mlpt": [
+              0.245,
+              0.965
+            ],
+            "gt": [
+              0.245,
+              0.965
+            ]
+          },
+          "3": {
+            "eve": [
+              0.21,
+              0.945
+            ],
+            "runt": [
+              0.21,
+              0.945
+            ],
+            "odd": [
+              0.21,
+              0.945
+            ],
+            "kr": [
+              0.21,
+              0.945
+            ],
+            "mlpt": [
+              0.21,
+              0.945
+            ],
+            "gt": [
+              0.21,
+              0.945
+            ]
+          }
+        },
+        "temporal_range": {
+          "eve": [
+            1.3,
+            4.2
+          ],
+          "runt": [
+            1.3,
+            4.2
+          ],
+          "odd": [
+            1.3,
+            4.2
+          ],
+          "kr": [
+            1.3,
+            4.2
+          ],
+          "mlpt": [
+            1.3,
+            4.2
+          ],
+          "gt": [
+            1.3,
+            4.2
+          ]
+        }
+      },
+      "Stage4_3": {
+        "smooth": {
+          "1": {
+            "eve": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "kr": {
+              "frac": 0.35,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.2,
+              "polyorder": 3
+            }
+          },
+          "2": {
+            "eve": {
+              "frac": 0.15,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.19,
+              "polyorder": 3
+            },
+            "kr": {
+              "frac": 0.25,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.1,
+              "polyorder": 3
+            }
+          },
+          "3": {
+            "eve": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.25,
+              "polyorder": 4
+            },
+            "kr": {
+              "frac": 0.3,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.2,
+              "polyorder": 3
+            }
+          }
+        },
+        "spatial_range": {
+          "1": {
+            "eve": [
+              0.275,
+              0.9
+            ],
+            "runt": [
+              0.275,
+              0.9
+            ],
+            "odd": [
+              0.275,
+              0.9
+            ],
+            "kr": [
+              0.275,
+              0.9
+            ],
+            "mlpt": [
+              0.275,
+              0.9
+            ],
+            "gt": [
+              0.275,
+              0.9
+            ]
+          },
+          "2": {
+            "eve": [
+              0.2,
+              0.9
+            ],
+            "runt": [
+              0.2,
+              0.9
+            ],
+            "odd": [
+              0.2,
+              0.9
+            ],
+            "kr": [
+              0.2,
+              0.9
+            ],
+            "mlpt": [
+              0.2,
+              0.9
+            ],
+            "gt": [
+              0.2,
+              0.9
+            ]
+          },
+          "3": {
+            "eve": [
+              0.2,
+              0.9
+            ],
+            "runt": [
+              0.2,
+              0.9
+            ],
+            "odd": [
+              0.2,
+              0.9
+            ],
+            "kr": [
+              0.2,
+              0.9
+            ],
+            "mlpt": [
+              0.2,
+              0.9
+            ],
+            "gt": [
+              0.2,
+              0.9
+            ]
+          }
+        },
+        "temporal_range": {
+          "eve": [
+            1.3,
+            4.3
+          ],
+          "runt": [
+            1.3,
+            4.3
+          ],
+          "odd": [
+            1.3,
+            4.3
+          ],
+          "kr": [
+            1.3,
+            4.3
+          ],
+          "mlpt": [
+            1.3,
+            4.3
+          ],
+          "gt": [
+            1.3,
+            4.3
+          ]
+        }
+      },
+      "Stage5_2": {
+        "smooth": {
+          "1": {
+            "eve": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.05,
+              "polyorder": 3
+            },
+            "kr": {
+              "frac": 0.3,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.15,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.15,
+              "polyorder": 3
+            }
+          },
+          "2": {
+            "eve": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "kr": {
+              "frac": 0.3,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.15,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.15,
+              "polyorder": 3
+            }
+          },
+          "3": {
+            "eve": {
+              "frac": 0.05,
+              "polyorder": 3
+            },
+            "runt": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "odd": {
+              "frac": 0.1,
+              "polyorder": 3
+            },
+            "kr": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "mlpt": {
+              "frac": 0.2,
+              "polyorder": 3
+            },
+            "gt": {
+              "frac": 0.15,
+              "polyorder": 3
+            }
+          }
+        },
+        "spatial_range": {
+          "1": {
+            "eve": [
+              0.225,
+              0.95
+            ],
+            "runt": [
+              0.225,
+              0.95
+            ],
+            "odd": [
+              0.225,
+              0.95
+            ],
+            "kr": [
+              0.225,
+              0.95
+            ],
+            "mlpt": [
+              0.225,
+              0.95
+            ],
+            "gt": [
+              0.225,
+              0.95
+            ]
+          },
+          "2": {
+            "eve": [
+              0.2,
+              0.95
+            ],
+            "runt": [
+              0.2,
+              0.95
+            ],
+            "odd": [
+              0.2,
+              0.95
+            ],
+            "kr": [
+              0.2,
+              0.95
+            ],
+            "mlpt": [
+              0.2,
+              0.95
+            ],
+            "gt": [
+              0.2,
+              0.95
+            ]
+          },
+          "3": {
+            "eve": [
+              0.215,
+              0.975
+            ],
+            "runt": [
+              0.215,
+              0.975
+            ],
+            "odd": [
+              0.215,
+              0.975
+            ],
+            "kr": [
+              0.215,
+              0.975
+            ],
+            "mlpt": [
+              0.215,
+              0.975
+            ],
+            "gt": [
+              0.215,
+              0.975
+            ]
+          }
+        },
+        "temporal_range": {
+          "eve": [
+            1.3,
+            5.2
+          ],
+          "runt": [
+            1.3,
+            5.2
+          ],
+          "odd": [
+            1.3,
+            5.2
+          ],
+          "kr": [
+            1.3,
+            5.2
+          ],
+          "mlpt": [
+            1.3,
+            5.2
+          ],
+          "gt": [
+            1.3,
+            5.2
+          ]
+        }
+      }
+    }
+  },
+  "implementation_notes": [
+    "No peak count, hand-entered landmarks, WDL band detection or temporal-spatial registration is inherited. This file describes smoothing only.",
+    "Original WDL temporal eve pools duplicate run/odd eve measurements. Figure7 uses paired same-cohort eve where needed, retaining correct biological pairing; smoothing does not require reproducing that pooling choice."
+  ],
+  "explicit_method_extensions": {
+    "svb": {
+      "reason": "SVB is absent from GENES and smoothing config in all five inspected original comparison notebooks.",
+      "spatial": {
+        "frac": 0.1,
+        "polyorder": 3,
+        "provenance": "Original smooth_signal function default, applied here as a documented extension; not a recovered gene-specific historical setting.",
+        "sensitivity_fractions": [
+          0.05,
+          0.1,
+          0.15,
+          0.2
+        ],
+        "pipeline": "Min-max normalize full raw native profile, then apply original smooth_signal implementation before detecting features."
+      },
+      "temporal": {
+        "dense_grid_size": 800,
+        "frac": 0.1,
+        "polyorder": 3,
+        "window_length": 81,
+        "provenance": "Same original pipeline extended to SVB and paired cohort-specific eve stage means."
+      }
+    }
+  }
+}

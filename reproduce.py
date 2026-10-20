@@ -38,6 +38,12 @@ def main():
     model.add_argument("--stage", choices=MODEL_STAGES, default="verify")
     model.add_argument("--output", type=Path, default=ROOT / "outputs")
     model.add_argument("--fresh", action="store_true", help="Fit without archived warm starts")
+    peaks = sub.add_parser("peaks", help="Rebuild the second-revision peak-order analysis and Fig. 7")
+    peaks.add_argument("--output", type=Path, default=ROOT / "outputs/peak_order")
+    peaks.add_argument("--bootstraps", type=int, default=20000)
+    peaks.add_argument("--skip-figures", action="store_true")
+    peaks.add_argument("--apply-confirmed-corrections", action="store_true",
+                       help="Separate sensitivity run with the recovered late KR-cohort eve background")
     args = parser.parse_args()
     if args.command == "verify":
         from seqimaging.validation import verify
@@ -47,6 +53,14 @@ def main():
     elif args.command == "profiles":
         from seqimaging.figures import reproduce_profiles
         reproduce_profiles(args.output)
+    elif args.command == "peaks":
+        command = [sys.executable, str(ROOT / "analysis/peak_order/run_analysis.py"),
+                   "--output-dir", str(args.output), "--bootstraps", str(args.bootstraps)]
+        if args.skip_figures:
+            command.append("--skip-figures")
+        if args.apply_confirmed_corrections:
+            command.append("--apply-confirmed-corrections")
+        subprocess.run(command, cwd=ROOT, check=True)
     else:
         model_run(args.stage, args.output, args.fresh)
 

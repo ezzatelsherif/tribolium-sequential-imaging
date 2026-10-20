@@ -1,0 +1,22 @@
+gene_1,gene_2,audit_rows,matched_temporal_channels,eligible_rows,note
+eve,gt,120,True,48,Relationships are event- and stage-specific; rows share genes and embryos.
+eve,kr,60,True,21,Relationships are event- and stage-specific; rows share genes and embryos.
+eve,mlpt,60,True,30,Relationships are event- and stage-specific; rows share genes and embryos.
+eve,odd,93,True,44,Relationships are event- and stage-specific; rows share genes and embryos.
+eve,run,93,True,69,Relationships are event- and stage-specific; rows share genes and embryos.
+eve,svb,60,True,21,Relationships are event- and stage-specific; rows share genes and embryos.
+gt,kr,24,False,12,Relationships are event- and stage-specific; rows share genes and embryos.
+gt,mlpt,24,False,18,Relationships are event- and stage-specific; rows share genes and embryos.
+gt,odd,96,False,27,Relationships are event- and stage-specific; rows share genes and embryos.
+gt,run,96,False,42,Relationships are event- and stage-specific; rows share genes and embryos.
+gt,svb,24,False,12,Relationships are event- and stage-specific; rows share genes and embryos.
+kr,mlpt,12,False,9,Relationships are event- and stage-specific; rows share genes and embryos.
+kr,odd,48,False,13,Relationships are event- and stage-specific; rows share genes and embryos.
+kr,run,48,False,21,Relationships are event- and stage-specific; rows share genes and embryos.
+kr,svb,12,False,9,Relationships are event- and stage-specific; rows share genes and embryos.
+mlpt,odd,48,False,17,Relationships are event- and stage-specific; rows share genes and embryos.
+mlpt,run,48,False,27,Relationships are event- and stage-specific; rows share genes and embryos.
+mlpt,svb,12,False,9,Relationships are event- and stage-specific; rows share genes and embryos.
+odd,run,93,True,40,Relationships are event- and stage-specific; rows share genes and embryos.
+odd,svb,48,False,13,Relationships are event- and stage-specific; rows share genes and embryos.
+run,svb,48,False,21,Relationships are event- and stage-specific; rows share genes and embryos.

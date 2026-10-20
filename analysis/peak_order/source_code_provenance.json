@@ -1,0 +1,99 @@
+[
+  {
+    "source_file": "all_gene_direct_analysis/temporal_direct.py",
+    "source_sha256": "5bfb9650d80cb02dd2703fe698a4a313b2ec3a6176c04bc3298c80648c925d10",
+    "packaged_file": "engine/all_gene_direct_analysis/temporal_direct.py",
+    "packaged_sha256": "5bfb9650d80cb02dd2703fe698a4a313b2ec3a6176c04bc3298c80648c925d10"
+  },
+  {
+    "source_file": "all_gene_direct_analysis/spatial_direct.py",
+    "source_sha256": "4032bff024f4152654e172e0ce0255910c8c69d8bd59cd5c82f475a04c3f9205",
+    "packaged_file": "engine/all_gene_direct_analysis/spatial_direct.py",
+    "packaged_sha256": "4032bff024f4152654e172e0ce0255910c8c69d8bd59cd5c82f475a04c3f9205"
+  },
+  {
+    "source_file": "figure7_ver04_analysis/smoothing.py",
+    "source_sha256": "f8a5993797f87a20b33c2878e6935e3f0a526193afd17a61b237d4a24e7c117e",
+    "packaged_file": "engine/figure7_ver04_analysis/smoothing.py",
+    "packaged_sha256": "f8a5993797f87a20b33c2878e6935e3f0a526193afd17a61b237d4a24e7c117e"
+  },
+  {
+    "source_file": "figure7_ver04_analysis/original_smoothing_config.json",
+    "source_sha256": "22136a56304e56777fcdf69c319698d2ab0b8f999d78c1ad567d5e2685ca453a",
+    "packaged_file": "engine/figure7_ver04_analysis/original_smoothing_config.json",
+    "packaged_sha256": "22136a56304e56777fcdf69c319698d2ab0b8f999d78c1ad567d5e2685ca453a"
+  },
+  {
+    "source_file": "figure7_ver04_analysis/pairrule/extract_pairrule.py",
+    "source_sha256": "1438aa807a246df0709684c30fdf934ce8965f007f3c9f7b6f84de6007a4f700",
+    "packaged_file": "engine/figure7_ver04_analysis/pairrule/extract_pairrule.py",
+    "packaged_sha256": "1438aa807a246df0709684c30fdf934ce8965f007f3c9f7b6f84de6007a4f700"
+  },
+  {
+    "source_file": "figure7_ver04_analysis/gt_mlpt/reanalyze.py",
+    "source_sha256": "37df7f786c85df12e570cea7101440a166389cea47d93434e49397c5a74ffa58",
+    "packaged_file": "engine/figure7_ver04_analysis/gt_mlpt/reanalyze.py",
+    "packaged_sha256": "37df7f786c85df12e570cea7101440a166389cea47d93434e49397c5a74ffa58"
+  },
+  {
+    "source_file": "figure7_ver04_analysis/svb_eve/extract_svb_eve.py",
+    "source_sha256": "18bde4e160df32a598b560454e1950679e1e8241552870008671e026bbee2653",
+    "packaged_file": "engine/figure7_ver04_analysis/svb_eve/extract_svb_eve.py",
+    "packaged_sha256": "94b63d774d12b0eafce340bd600d148fe1b7a91bc22789550606e0e1183179c8"
+  },
+  {
+    "source_file": "figure7_ver04_analysis/svb_eve/feature_helpers.py",
+    "source_sha256": "9c231b6d4455f7b978ddfb8c3daac04d9d1a331f30e2b973c455fb76e14ccbb8",
+    "packaged_file": "engine/figure7_ver04_analysis/svb_eve/feature_helpers.py",
+    "packaged_sha256": "9c231b6d4455f7b978ddfb8c3daac04d9d1a331f30e2b973c455fb76e14ccbb8"
+  },
+  {
+    "source_file": "figure7_ver04_analysis/svb_eve/sensitivity_and_checks.py",
+    "source_sha256": "3d46be61f6c1dd41f23a0f1ec6df4368b2937f71a004ea816c3292aa026fd156",
+    "packaged_file": "engine/figure7_ver04_analysis/svb_eve/sensitivity_and_checks.py",
+    "packaged_sha256": "3d46be61f6c1dd41f23a0f1ec6df4368b2937f71a004ea816c3292aa026fd156"
+  },
+  {
+    "source_file": "figure7_ver05_analysis/pairrule/build_peak_screen.py",
+    "source_sha256": "d85a23a1aaef50f63b2ce6fb39c12698f1763e3c108010e05d18dacf21dd2714",
+    "packaged_file": "engine/figure7_ver05_analysis/pairrule/build_peak_screen.py",
+    "packaged_sha256": "d85a23a1aaef50f63b2ce6fb39c12698f1763e3c108010e05d18dacf21dd2714"
+  },
+  {
+    "source_file": "figure7_ver05_analysis/gap_peaks/extract_gap_peaks.py",
+    "source_sha256": "82472c2d67285c3159e55024e1a127968c259a632a315cda786ce2b0d77c532e",
+    "packaged_file": "engine/figure7_ver05_analysis/gap_peaks/extract_gap_peaks.py",
+    "packaged_sha256": "82472c2d67285c3159e55024e1a127968c259a632a315cda786ce2b0d77c532e"
+  },
+  {
+    "source_file": "figure7_ver05_analysis/gap_peaks/compare_peak_orders.py",
+    "source_sha256": "203bf73179a3484644c857a5a411453f896c5cf5bef27e43432b068b6992a990",
+    "packaged_file": "engine/figure7_ver05_analysis/gap_peaks/compare_peak_orders.py",
+    "packaged_sha256": "203bf73179a3484644c857a5a411453f896c5cf5bef27e43432b068b6992a990"
+  },
+  {
+    "source_file": "figure7_ver08/build_figure7.py",
+    "source_sha256": "5db12bfccf3e7a3c158885b6ff51775e71463d230c104cb1f5b63fb43b72468e",
+    "packaged_file": "engine/figure7_ver08/build_figure7.py",
+    "packaged_sha256": "5db12bfccf3e7a3c158885b6ff51775e71463d230c104cb1f5b63fb43b72468e"
+  },
+  {
+    "source_file": "figure7_ver08/plot_core.py",
+    "source_sha256": "92146f46aba2d02a50514de8ad3f2009869e639a9e028addd2546c35d89f33c7",
+    "packaged_file": "engine/figure7_ver08/plot_core.py",
+    "packaged_sha256": "6ae3da39508e566a19aa60ae466940426a8a98cb2f15b10e767c687ed6d19717"
+  },
+  {
+    "source_file": "figure7_ver06/build_companion.py",
+    "source_sha256": "e3fb8950913e8b9cb00ea18dc0d8bfe898fd46fb6b2561794970847cc6192c65",
+    "packaged_file": "engine/figure7_ver06/build_companion.py",
+    "packaged_sha256": "e3fb8950913e8b9cb00ea18dc0d8bfe898fd46fb6b2561794970847cc6192c65"
+  },
+  {
+    "source_file": "figure7_ver05/assemble_outputs.py",
+    "source_sha256": "6095c9c5cf2d75c4c33bc976c564b909ba8d9057e03bc5cef67f38e499eb171d",
+    "packaged_file": "engine/figure7_ver05/assemble_outputs.py",
+    "packaged_sha256": "78faeafd977c60608dae6c08db243402567d36672015ed19bc5bd67db3893234",
+    "packaging_change": "Only table assembly retained; obsolete narrative report omitted."
+  }
+]
