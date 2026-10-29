@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "workbook_sha256": "904f3b7660a3a6efe58f6d7153a0d4db157919a0e1cf72e55431c29a8458ab41",
+  "sheets": [
+    "Overall summary",
+    "By landmark",
+    "Landmark inventory",
+    "Original peak audit",
+    "Summary source",
+    "ReadMe",
+    "Data dictionary"
+  ],
+  "source_tables": {
+    "Landmark inventory": {
+      "rows": 859,
+      "columns": 42,
+      "exact_source_cells": 36120,
+      "sha256": "627df8e24e67b172cdc752f936f81946903433b373318a3a1fb7e0511fe02c3d"
+    },
+    "Original peak audit": {
+      "rows": 1167,
+      "columns": 29,
+      "exact_source_cells": 33872,
+      "sha256": "9c42f3aaf2857d50cf0090bcf4de280ff4c890674be81119af90a5456b678938"
+    },
+    "Summary source": {
+      "rows": 45,
+      "columns": 9,
+      "exact_source_cells": 414,
+      "sha256": "754d51b5f49babd3a1281f111651f635bf9d22af70bdf608ddeb978b4d963278"
+    }
+  },
+  "all_source_values_exact": true,
+  "source_summaries_match_inventory": true,
+  "displayed_counts_and_percentages_match_sources": true,
+  "excel_formula_errors": 0
+}

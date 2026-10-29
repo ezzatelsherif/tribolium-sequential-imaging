@@ -5,8 +5,8 @@ translating time into space during embryonic patterning**, Garcia-Guillen,
 Ahmadi, Frimpong and colleagues, El-Sherif laboratory.
 
 This repository reproduces the numerical expression profiles, intron/exon
-analyses, biochemical simulations, and temporal-to-spatial peak-order analysis
-in the second revision (Manuscript ver57, S1 Text ver03). Its inputs
+analyses, biochemical simulations, and the final second-revision temporal-to-spatial
+landmark analysis, including peaks and rising/falling half-height borders. Its inputs
 are the extracted fluorescence measurements used in the paper: 17 spatial
 embryo CSVs, seven temporal workbooks, and the mapped probe-target information
 in the intron/exon analysis package. Additional embryos and developmental
@@ -44,7 +44,7 @@ python -m pip install -r requirements.txt
 python reproduce.py verify
 python reproduce.py profiles
 python reproduce.py model --stage manuscript-figures
-python reproduce.py peaks
+python reproduce.py landmarks
 ```
 
 `verify` checks source checksums, historical manuscript curve matches, the
@@ -57,22 +57,33 @@ figures (S1 and S2 in the final revised manuscript) to
 `outputs/model/figures/`. These commands regenerate numerical panels with clear
 labels; they do not reconstruct the complete microscopy composites.
 
-`peaks` rebuilds the complete 20,000-draw peak-order analysis from the repository
-measurements, including Fig. 7 (PDF, editable SVG and PNG), the seven-page
-companion for Fig. S6, and S1 Data. It checks the reconstructed tables against
-the reviewed results. Use a new output directory for each run:
+`landmarks` reconstructs the complete 859-candidate landmark inventory and the
+pooled and stratified results from the saved 20,000-draw biological bootstrap.
+There are 233 eligible comparisons. The combined landmark results and original
+peak audit are provided in **S1 Data**, a workbook with separate, clearly labeled
+sheets. The CSV filenames containing `S2_Data` and `S3_Data` are retained as stable
+internal filenames; they are no longer separate submission supplements.
+
+To reproduce the final six-panel Fig. 7, install the additional plotting
+dependencies and the Inkscape command-line application, then use a fresh output
+directory:
 
 ```sh
-python reproduce.py peaks --output outputs/peak_order_recheck
+python -m pip install -r analysis/landmarks/requirements-figure.txt
+python reproduce.py landmarks --figure --output outputs/landmarks_figure
 ```
 
-The default peak command reproduces the reviewed historical run exactly. A
-separate documented sensitivity applies the confirmed late-stage background
-correction. These two input policies must not be conflated; see the
-[peak-order documentation](analysis/peak_order/README.md). The correction
-leaves the six Fig. 7 direct contrasts and all 1,167 ordering classifications
-unchanged. The generated figures retain the audited layout; the submitted
-Fig. 7 needs a shorter layout to meet the journal's maximum figure height.
+This rebuilds the editable single-layer SVG, vector PDF, 600 dpi TIFF and PNG
+preview. The SVG is checked against the exact submitted artwork. See the
+[landmark documentation](analysis/landmarks/README.md) for the workbook map,
+source measurements, numerical checks, uncertainty definitions and full
+regeneration from measured profiles.
+
+`peaks` remains available as the historical peak-only workflow. It rebuilds the
+original 20,000-draw analysis, its earlier Fig. 7 layout, the Fig. S6 companion
+and the original peak audit. It does not generate the current six-panel Fig. 7.
+The original input policies and correction sensitivity are documented in the
+[peak-order documentation](analysis/peak_order/README.md).
 
 ## Recompute the analyses
 
@@ -85,7 +96,9 @@ choose a new path when starting from a different repository version.
 |---|---|
 | `python reproduce.py verify` | Source integrity, 121 historical curve-shape checks and correction checks, and archived model verification |
 | `python reproduce.py profiles` | Spatial and temporal profiles, stage summaries, and comparison panels |
-| `python reproduce.py peaks` | Full 20,000-draw peak-order analysis, Fig. 7, Fig. S6 companion, S1 Data, and regression checks |
+| `python reproduce.py landmarks` | Current landmark inventory and pooled/stratified counts from saved biological draws, with reference checks |
+| `python reproduce.py landmarks --figure` | Current six-panel Fig. 7 in SVG, PDF, TIFF and PNG, plus numerical checks |
+| `python reproduce.py peaks` | Historical full 20,000-draw peak-order analysis, earlier Fig. 7, Fig. S6 companion, original peak audit, and regression checks |
 | `python reproduce.py peaks --apply-confirmed-corrections --output outputs/peak_order_corrected` | Separate full sensitivity with the recovered late KR-cohort eve background |
 | `python -m seqimaging.correction_review` | Effects of the recovered background and removal of repeated eve measurements |
 | `python reproduce.py model --stage empirical` | Background correction and 5,000 paired within-stage bootstrap resamples |
@@ -119,7 +132,8 @@ model restrictions, and numerical qualifications are documented in the
 | [docs/validation.md](docs/validation.md) | What was checked and the limits of those checks |
 | [seqimaging/](seqimaging/) | Profile readers, summaries, plotting, and verification |
 | [analysis/intron_exon/](analysis/intron_exon/) | Original S1 Code package, source measurements, saved results, and executable notebook |
-| [analysis/peak_order/](analysis/peak_order/) | Second-revision peak-order code, curated event identities, reviewed tables, and full-run validation |
+| [analysis/peak_order/](analysis/peak_order/) | Original peak-order code, curated event identities, reviewed tables, and full-run validation |
+| [analysis/landmarks/](analysis/landmarks/) | Final peak and half-height analysis, saved bootstrap arrays, full inventory, pooled statistics, S1 Data workbook, and current Fig. 7 reconstruction |
 
 The seven temporal workbooks retain the original measurements and cached
 worksheet values. Three are also present in the unchanged S1 Code package;
@@ -143,7 +157,9 @@ identifies the corresponding final panels. The second revision adds Fig. 7,
 Fig. S6 and S1 Data, audited against `Manuscript_ver57.docx` and
 `S1_Text_ver03.docx` on 20 October 2026. These additions reuse 12 of the existing
 spatial files and the seven existing temporal workbooks; they introduce no
-additional biological specimens.
+additional biological specimens. The final landmark extension adds half-height
+borders and the pooled Fig. 7 summary using the same measured specimens. Its
+provenance and numerical reference checks are recorded in `analysis/landmarks/`.
 
 ## Attribution and citation
 

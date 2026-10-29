@@ -1,0 +1,10 @@
+outputs/
+__pycache__/
+*.pyc
+*.tmp
+*.writing
+figure7/qa/
+figure7/Fig7_ver12.svg
+figure7/Fig7_ver12.pdf
+figure7/Fig7_ver12.tiff
+figure7/Fig7_ver12.png

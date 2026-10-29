@@ -1,0 +1,46 @@
+panel,group,category,count,total,percentage,summary_scope,figure_panel,category_label
+all_landmarks,pair-rule,preserved_all3,32,33,96.96969696969697,pooled_landmarks,B,Preserved order in all 3 embryos
+all_landmarks,pair-rule,reversed_all3,0,33,0.0,pooled_landmarks,B,Reversed order in all 3 embryos
+all_landmarks,pair-rule,spatial_consistent_temporal_unresolved,0,33,0.0,pooled_landmarks,B,"Unresolved in time, separated in space"
+all_landmarks,pair-rule,mixed,1,33,3.0303030303030303,pooled_landmarks,B,Different spatial orders among embryos
+all_landmarks,pair-rule,other_unresolved,0,33,0.0,pooled_landmarks,B,Other unresolved comparisons
+all_landmarks,gap-gap,preserved_all3,28,41,68.29268292682927,pooled_landmarks,B,Preserved order in all 3 embryos
+all_landmarks,gap-gap,reversed_all3,3,41,7.317073170731708,pooled_landmarks,B,Reversed order in all 3 embryos
+all_landmarks,gap-gap,spatial_consistent_temporal_unresolved,5,41,12.195121951219512,pooled_landmarks,B,"Unresolved in time, separated in space"
+all_landmarks,gap-gap,mixed,4,41,9.75609756097561,pooled_landmarks,B,Different spatial orders among embryos
+all_landmarks,gap-gap,other_unresolved,1,41,2.4390243902439024,pooled_landmarks,B,Other unresolved comparisons
+all_landmarks,gap-pair-rule,preserved_all3,117,159,73.58490566037736,pooled_landmarks,B,Preserved order in all 3 embryos
+all_landmarks,gap-pair-rule,reversed_all3,13,159,8.176100628930818,pooled_landmarks,B,Reversed order in all 3 embryos
+all_landmarks,gap-pair-rule,spatial_consistent_temporal_unresolved,9,159,5.660377358490566,pooled_landmarks,B,"Unresolved in time, separated in space"
+all_landmarks,gap-pair-rule,mixed,15,159,9.433962264150944,pooled_landmarks,B,Different spatial orders among embryos
+all_landmarks,gap-pair-rule,other_unresolved,5,159,3.1446540880503147,pooled_landmarks,B,Other unresolved comparisons
+peak,pair-rule,preserved_all3,18,18,100.0,peaks,,Preserved order in all 3 embryos
+peak,pair-rule,reversed_all3,0,18,0.0,peaks,,Reversed order in all 3 embryos
+peak,pair-rule,spatial_consistent_temporal_unresolved,0,18,0.0,peaks,,"Unresolved in time, separated in space"
+peak,pair-rule,mixed,0,18,0.0,peaks,,Different spatial orders among embryos
+peak,pair-rule,other_unresolved,0,18,0.0,peaks,,Other unresolved comparisons
+peak,gap-gap,preserved_all3,12,18,66.66666666666667,peaks,,Preserved order in all 3 embryos
+peak,gap-gap,reversed_all3,1,18,5.555555555555555,peaks,,Reversed order in all 3 embryos
+peak,gap-gap,spatial_consistent_temporal_unresolved,2,18,11.11111111111111,peaks,,"Unresolved in time, separated in space"
+peak,gap-gap,mixed,2,18,11.11111111111111,peaks,,Different spatial orders among embryos
+peak,gap-gap,other_unresolved,1,18,5.555555555555555,peaks,,Other unresolved comparisons
+peak,gap-pair-rule,preserved_all3,60,80,75.0,peaks,,Preserved order in all 3 embryos
+peak,gap-pair-rule,reversed_all3,5,80,6.25,peaks,,Reversed order in all 3 embryos
+peak,gap-pair-rule,spatial_consistent_temporal_unresolved,4,80,5.0,peaks,,"Unresolved in time, separated in space"
+peak,gap-pair-rule,mixed,8,80,10.0,peaks,,Different spatial orders among embryos
+peak,gap-pair-rule,other_unresolved,3,80,3.75,peaks,,Other unresolved comparisons
+half_height,pair-rule,preserved_all3,14,15,93.33333333333333,half_heights,,Preserved order in all 3 embryos
+half_height,pair-rule,reversed_all3,0,15,0.0,half_heights,,Reversed order in all 3 embryos
+half_height,pair-rule,spatial_consistent_temporal_unresolved,0,15,0.0,half_heights,,"Unresolved in time, separated in space"
+half_height,pair-rule,mixed,1,15,6.666666666666667,half_heights,,Different spatial orders among embryos
+half_height,pair-rule,other_unresolved,0,15,0.0,half_heights,,Other unresolved comparisons
+half_height,gap-gap,preserved_all3,16,23,69.56521739130434,half_heights,,Preserved order in all 3 embryos
+half_height,gap-gap,reversed_all3,2,23,8.695652173913043,half_heights,,Reversed order in all 3 embryos
+half_height,gap-gap,spatial_consistent_temporal_unresolved,3,23,13.043478260869565,half_heights,,"Unresolved in time, separated in space"
+half_height,gap-gap,mixed,2,23,8.695652173913043,half_heights,,Different spatial orders among embryos
+half_height,gap-gap,other_unresolved,0,23,0.0,half_heights,,Other unresolved comparisons
+half_height,gap-pair-rule,preserved_all3,57,79,72.15189873417721,half_heights,,Preserved order in all 3 embryos
+half_height,gap-pair-rule,reversed_all3,8,79,10.126582278481013,half_heights,,Reversed order in all 3 embryos
+half_height,gap-pair-rule,spatial_consistent_temporal_unresolved,5,79,6.329113924050633,half_heights,,"Unresolved in time, separated in space"
+half_height,gap-pair-rule,mixed,7,79,8.860759493670885,half_heights,,Different spatial orders among embryos
+half_height,gap-pair-rule,other_unresolved,2,79,2.5316455696202533,half_heights,,Other unresolved comparisons

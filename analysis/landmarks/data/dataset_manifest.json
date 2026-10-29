@@ -1,0 +1,22 @@
+{
+  "source_commit": "a09fafea149c097516646d0ad8bec3d5b0ad8169",
+  "draws": 20000,
+  "canonical_sign": "b minus a; AP increases anterior to posterior",
+  "orientation": "fixed observed temporal sign; never reoriented per draw",
+  "strict_completion": "both marginal 95% CI upper bounds < stage index - 0.5, all landmarks/classes",
+  "source_table_sha256": {
+    "gt_mlpt_spatial.csv": "6b25a02548d6da4287b379a5ec91b4e13503bd70333efefc7e45b2fa1a7cc04c",
+    "previous_border_inventory.csv": "fddc70e33619aec22d353cce61889be452147422b50ac02db2cdad540a07fce8",
+    "posterior_mask.csv": "1402d9df7347a50c140b92c5c5f7bd146bb01583f86c9f9c7a547635201ab39d",
+    "old_kr_eve_temporal.csv": "9733b2aec2dda11ce5a74d2abe2b717a945415c382a0a594ef823fe4e0b10eb5",
+    "old_svb_eve_temporal.csv": "029545b9e77552ba1ffaf89bb308211fbdb96edbde858d7ada377afb3dc778e4",
+    "pairrule_spatial.csv": "b1be4ae184056d8d8641d47f5ae7f93d728cc8247d420204bd51555ce7f18045",
+    "peak_inventory.csv": "9c42f3aaf2857d50cf0090bcf4de280ff4c890674be81119af90a5456b678938",
+    "kr_spatial.csv": "4ad5195f500de42cffd182caf978cf7d73e19fea1c5221a07f9c10e24bd5ba8d",
+    "svb_spatial.csv": "7e277a466b04330d092a63ac1ff4b66caad78e27d6e0dfbedf93784e6488a756",
+    "old_gt_mlpt_temporal_borders.csv": "636f5b611cec4b1173b0ab06576750b7b3a812db155b5078ad123687946e302a"
+  },
+  "comparison_rows": 859,
+  "unique_contrasts": 226,
+  "gene_pairs": 21
+}

@@ -68,3 +68,20 @@ The historical reference CSVs are checks, not substituted results. See
 [the package README](../analysis/peak_order/README.md) for output names,
 uncertainty assumptions, source-input hashes, and the independently rerun
 late-background-correction sensitivity.
+
+
+## Final second revision: pooled landmark analysis and Figure 7
+
+The current Fig. 7 is reconstructed by `python reproduce.py landmarks --figure`.
+Panel A illustrates the three landmark definitions; panel B pools 233 eligible
+peak and half-height comparisons; panels C-F retain the four case comparisons.
+The figure is landscape, with the four cases across one row. The editable SVG,
+PDF, 600 dpi TIFF and PNG are written under `outputs/landmarks/figure7/` by the
+default command. Use a fresh `--output` path for another run.
+
+The earlier `python reproduce.py peaks` command and descriptions above document
+the original peak-only revision and reproduce its historical Fig. 7 layout.
+They remain the source for the Fig. S6 companion and original peak audit.
+The final submission consolidates the earlier S1-S3 Data tables into one S1 Data
+workbook; stable CSV filenames in the code are retained for reproducibility.
+See `analysis/landmarks/README.md` for the workbook sheet map and full lineage.

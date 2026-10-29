@@ -1,0 +1,5 @@
+gene,event,normalization,threshold,anchor_method,window_start,window_end,unit,estimate,ci95_low,ci95_high,valid_bootstrap_n,valid_bootstrap_fraction,valid_fraction
+GT,rise,episode,0.5,none,3.1,6.1,ordinal_substage,7.3385998728782695,7.215218489879043,7.439537270986685,20000,1.0,1.0
+GT,fall,episode,0.5,none,3.1,6.1,ordinal_substage,11.041538437692855,10.90258867416586,11.170811773354451,20000,1.0,1.0
+MLPT,rise,episode,0.5,none,1.3,5.1,ordinal_substage,5.397923658712899,4.784141365791514,5.820661805287768,20000,1.0,1.0
+MLPT,fall,episode,0.5,none,1.3,5.1,ordinal_substage,9.497613574372181,9.241395556446994,9.908356588019645,20000,1.0,1.0

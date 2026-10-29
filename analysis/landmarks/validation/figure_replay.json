@@ -1,0 +1,108 @@
+{
+  "dimensions_pt": [
+    1080,
+    640
+  ],
+  "dimensions_in": [
+    15.0,
+    8.88888888888889
+  ],
+  "baseline_dimensions_pt": [
+    540,
+    856
+  ],
+  "case_layout": "four columns in one row, C-D-E-F",
+  "case_block_translations": {
+    "C": [
+      0,
+      196
+    ],
+    "D": [
+      0,
+      196
+    ],
+    "E": [
+      540,
+      -219
+    ],
+    "F": [
+      540,
+      -219
+    ],
+    "case_legend": [
+      270,
+      -216
+    ]
+  },
+  "original_scaling": 1.0,
+  "original_svg_elements": 470,
+  "original_paths_unchanged": 271,
+  "all_original_object_attributes_unchanged": true,
+  "only_original_text_changes_from_ver10": [
+    [
+      "A",
+      "C"
+    ],
+    [
+      "B",
+      "D"
+    ],
+    [
+      "C",
+      "E"
+    ],
+    [
+      "D",
+      "F"
+    ]
+  ],
+  "case_panel_letters_unchanged_from_ver11": true,
+  "case_blocks_preserved_without_scaling": true,
+  "single_layer": true,
+  "pdf_embedded_images": 0,
+  "pdf_drawing_count": 306,
+  "tiff_pixels": [
+    9000,
+    5334
+  ],
+  "tiff_dpi": 600,
+  "counts": {
+    "pair-rule": [
+      32,
+      0,
+      0,
+      1,
+      0
+    ],
+    "gap-gap": [
+      28,
+      3,
+      5,
+      4,
+      1
+    ],
+    "gap-pair-rule": [
+      117,
+      13,
+      9,
+      15,
+      5
+    ]
+  },
+  "pooled_comparisons": 233,
+  "candidate_rows": 859,
+  "schematic": "Illustrative Gaussian pulse with peak and exactly 50% rising/falling points; no biological data.",
+  "purple_category_label": "Unresolved in time, separated in space",
+  "source_sha256": {
+    "S2_Data_Landmark_Comparisons.csv": "627df8e24e67b172cdc752f936f81946903433b373318a3a1fb7e0511fe02c3d",
+    "summary_counts_and_percentages.csv": "754d51b5f49babd3a1281f111651f635bf9d22af70bdf608ddeb978b4d963278",
+    "Fig7_ver10.svg": "2b9d138288e4a7de8a78d340c920a6eab7122a4d7f971f43cbfab721b208766a",
+    "landmark_distances.csv": "948ee63e060bbc0b3f9b67d2374afa9c309be133bb14e22a43bf6204f2901443"
+  },
+  "output_bytes": {
+    "Fig7_ver12.pdf": 116168,
+    "Fig7_ver12.tiff": 3185394,
+    "Fig7_ver12.svg": 333321,
+    "Fig7_ver12.png": 263133
+  }
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce profiles and simulations from the repository's source measurements."""
+"""Reproduce expression profiles, simulations, and temporal-to-spatial landmarks."""
 from pathlib import Path
 import argparse
 import shutil
@@ -44,6 +44,9 @@ def main():
     peaks.add_argument("--skip-figures", action="store_true")
     peaks.add_argument("--apply-confirmed-corrections", action="store_true",
                        help="Separate sensitivity run with the recovered late KR-cohort eve background")
+    landmarks = sub.add_parser("landmarks", help="Rebuild the current landmark analysis and optionally Fig. 7")
+    landmarks.add_argument("--output", type=Path, default=ROOT / "outputs/landmarks")
+    landmarks.add_argument("--figure", action="store_true", help="Also rebuild the six-panel Fig. 7; requires Inkscape")
     args = parser.parse_args()
     if args.command == "verify":
         from seqimaging.validation import verify
@@ -53,6 +56,19 @@ def main():
     elif args.command == "profiles":
         from seqimaging.figures import reproduce_profiles
         reproduce_profiles(args.output)
+    elif args.command == "landmarks":
+        working = args.output.resolve()
+        source = ROOT / "analysis/landmarks"
+        if working == source or source in working.parents:
+            parser.error("Choose an output directory outside analysis/landmarks")
+        if working.exists():
+            parser.error("Landmark output directory already exists; choose a fresh --output path")
+        shutil.copytree(source, working,
+                        ignore=shutil.ignore_patterns("__pycache__", "outputs", "*.tmp", "*.writing"))
+        command = [sys.executable, str(working / "reproduce.py")]
+        if args.figure:
+            command.append("--figure")
+        subprocess.run(command, cwd=working, check=True)
     elif args.command == "peaks":
         command = [sys.executable, str(ROOT / "analysis/peak_order/run_analysis.py"),
                    "--output-dir", str(args.output), "--bootstraps", str(args.bootstraps)]
